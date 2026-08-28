@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAS Technology - Sistem Inspeksi Mutu Industri</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Konfigurasi Tema Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                        },
+                        surface: '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .bg-grid-pattern {
+            background-image:
+                linear-gradient(to right, #f1f5f9 1px, transparent 1px),
+                linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .product-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: #3b82f6;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-slate-800 bg-white overflow-x-hidden selection:bg-brand-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav id="navbar"
+        class="fixed w-full z-50 glass-nav transition-all duration-500 ease-in-out transform -translate-y-full opacity-0">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center relative">
+            <!-- Logo -->
+            <a href="#home" class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-brand-600 rounded flex items-center justify-center text-white font-bold text-sm">
+                    T</div>
+                <span class="font-bold text-xl tracking-tight text-slate-900">Log<span
+                        class="text-brand-600">Go</span></span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="#industries" class="hover:text-brand-600 transition-colors"
+                    data-translate="nav-service">Layanan & Produk</a>
+                <a href="#gallery" class="hover:text-brand-600 transition-colors"
+                    data-translate="nav-gallery">Galeri</a>
+                <a href="#contact" class="hover:text-brand-600 transition-colors"
+                    data-translate="nav-contact">Contact</a>
+            </div>
+
+            <!-- Right Actions (Desktop) -->
+            <div class="hidden md:flex items-center space-x-8">
+                <button id="langToggleDesktop"
+                    class="flex items-center space-x-1 text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">
+                    <span id="btn-id-desktop" class="text-brand-600 font-bold transition-all">ID</span>
+                    <span class="text-slate-300">|</span>
+                    <span id="btn-en-desktop" class="transition-all">EN</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle & Lang (Mobile) -->
+            <div class="flex md:hidden items-center space-x-4">
+                <button id="langToggleMobile" class="flex items-center space-x-1 text-sm font-semibold text-slate-600">
+                    <span id="btn-id-mobile" class="text-brand-600 font-bold transition-all">ID</span>
+                    <span class="text-slate-300">|</span>
+                    <span id="btn-en-mobile" class="transition-all">EN</span>
+                </button>
+                <button id="mobile-menu-btn" class="text-slate-800 focus:outline-none"><i
+                        class="fa-solid fa-bars text-xl"></i></button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel (Baru) -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl transition-all duration-300">
+            <div class="px-6 py-4 flex flex-col space-y-4 text-sm font-semibold text-slate-700">
+                <a href="#industries" class="hover:text-brand-600" data-translate="nav-service">Layanan & Produk</a>
+                <a href="#about" class="hover:text-brand-600">Tentang Kami</a>
+                <a href="#contact" class="hover:text-brand-600" data-translate="nav-contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home"
+        class="relative min-h-screen flex items-center justify-center bg-white bg-grid-pattern overflow-hidden pt-24 pb-12 md:py-0">
+        <div
+            class="absolute top-0 left-0 w-96 h-96 bg-brand-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 transform -translate-x-1/2 -translate-y-1/2">
+        </div>
+        <div
+            class="absolute bottom-0 right-0 w-96 h-96 bg-brand-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 transform translate-x-1/2 translate-y-1/2">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+            <!-- Text Content -->
+            <div data-aos="fade-right" data-aos-duration="1000" class="text-center md:text-left mt-8 md:mt-0">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xs font-bold uppercase tracking-wider mb-6">
+                    <span class="relative flex h-2 w-2">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+                    </span>
+                    PT Lorem Ipsum
+                </div>
+
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.2] md:leading-[1.15] mb-6"
+                    data-translate="hero-title">
+                    Agen Terpercaya untuk <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400">Metal
+                        Detector.</span>
+                </h1>
+
+                <p class="text-sm md:text-md text-slate-600 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed"
+                    data-translate="hero-desc">
+                    Berdiri sejak 1978, "PT Lorem Ipsum" berkomitmen menyediakan peralatan keamanan pangan yang memenuhi
+                    standar HACCP, BRC, FSSC, dll. Fokus utama kami adalah penjualan dan layanan purna jual merek global
+                    Sesotec di Indonesia.
+                </p>
+
+                <div class="flex gap-5">
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#about"
+                            class="bg-brand-600 text-white font-semibold px-6 py-3.5 rounded-lg hover:bg-brand-700 hover:shadow-lg hover:shadow-brand-500/30 transition-all flex items-center gap-2"
+                            data-translate="hero-btn">
+                            Tentang Kami
+                        </a>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#"
+                            class="bg-brand-600 text-white font-semibold px-6 py-3.5 rounded-lg hover:bg-brand-700 hover:shadow-lg hover:shadow-brand-500/30 transition-all flex items-center gap-2"
+                            data-translate="hero-btn-scn">
+                            Layanan & Produk
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image/Visual Concept (Diperbaiki untuk Mobile) -->
+            <div id="hero-visual" class="relative group perspective-1000 mt-12 md:mt-0" data-aos="fade-left"
+                data-aos-duration="1200" style="perspective: 1000px;">
+                <div id="hero-card"
+                    class="relative rounded-2xl shadow-2xl border border-slate-100 bg-white transition-transform duration-100 ease-out will-change-transform mx-auto max-w-sm md:max-w-full"
+                    style="transform-style: preserve-3d;">
+                    <img src="/assets/MD-Sesotec.jpg" alt="High Tech Metal Detector Machinery"
+                        class="w-full backdrop-blur-md p-2 rounded-xl shadow-lg border border-slate-200/60 h-auto object-cover opacity-90 scale-100 md:scale-105 group-hover:scale-105 md:group-hover:scale-110 transition-transform duration-300">
+
+                    <!-- Posisi absolut diatur ulang agar tidak overlap di layar kecil -->
+                    <div class="absolute -top-8 left-0 md:-top-[7rem] md:left-[3rem] backdrop-blur-md p-1.5 md:p-2 rounded-xl shadow-lg border border-slate-200/60 z-10 w-20 h-20 md:w-48 md:h-48 flex items-center justify-center bg-white"
+                        style="transform: translateZ(40px);">
+                        <img src="/assets/RAPID_5000-1.jpg" alt="Detail Spec"
+                            class="w-full h-full object-cover rounded-lg border border-slate-100">
+                    </div>
+
+                    <div class="absolute border -bottom-8 right-0 md:-bottom-[7rem] md:right-4 backdrop-blur-md p-1.5 md:p-2 rounded-xl shadow-lg border border-slate-200/60 z-10 w-20 h-20 md:w-48 md:h-48 flex items-center justify-center bg-white"
+                        style="transform: translateZ(40px);">
+                        <img src="/assets/sesotec-raycon-xray.jpg" alt="Detail Spec"
+                            class="w-full h-full object-cover rounded-lg border border-slate-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="absolute bottom-0 w-full h-7 bg-gradient-to-t from-white to-transparent backdrop-blur-[2px] z-20 pointer-events-none"></div> -->
+    </section>
+
+    <!-- Parallax Section (About) -->
+    <section id="about"
+        class="pt-16 md:py-16 border-2 borrder-2 md:py-24 relative bg-white bg-grid-pattern overflow-hidden border-t border-slate-100">
+        <div
+            class="absolute top-10 left-10 w-80 h-80 bg-brand-100 rounded-full mix-blend-multiply filter blur-3xl opacity-60">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <!-- Gap diperkecil di mobile (gap-12 md:gap-[5rem]) -->
+            <div class="grid md:grid-cols-2 gap-12 md:gap-[5rem] items-center">
+
+                <div class="grid grid-cols-2 gap-4 md:gap-8 order-2 md:order-1" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="High Tech Machinery"
+                        class="rounded-xl hidden md:block object-cover h-40 md:h-64 w-full shadow-lg border border-slate-200 bg-white p-1">
+                    <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Clean Modern Corporate"
+                        class="rounded-xl hidden md:block object-cover h-40 md:h-64 w-full shadow-lg mt-6 md:mt-10 border border-slate-200 bg-white p-1">
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="order-1 md:order-2">
+                    <h2 class="text-2xl md:text-4xl font-bold text-slate-900 mb-4 md:mb-6 tracking-tight"
+                        data-translate="about-title">Mitra Andal untuk Kebutuhan Industri Sejak 2010</h2>
+                    <p class="text-sm md:text-base text-slate-600 mb-4 md:mb-6 leading-relaxed font-medium"
+                        data-translate="about-desc1">
+                        PT Lorem Ipsum hadir sebagai jembatan antara kebutuhan industri yang kompleks dengan teknologi
+                        inspeksi tercanggih. Kami memahami bahwa satu cacat produk yang lolos dapat menghancurkan
+                        kepercayaan konsumen bertahun-tahun.
+                    </p>
+                    <p class="text-sm md:text-base text-slate-600 mb-6 md:mb-8 leading-relaxed font-medium"
+                        data-translate="about-desc2">
+                        Oleh karena itu, kami tidak hanya menjual mesin, tetapi merancang sistem pertahanan kualitas
+                        (Quality Defense System) yang terintegrasi langsung dengan lini produksi manufaktur, makanan,
+                        farmasi, dan logistik Anda.
+                    </p>
+
+                    <!-- Statistik dijadikan responsive -->
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-3 gap-[4rem] md:gap-6 pt-6 border-t border-slate-200 text-center sm:text-left">
+                        <div>
+                            <p class="text-3xl font-extrabold text-brand-600 mb-1">15+</p>
+                            <p class="text-xs text-slate-500 font-bold uppercase tracking-wider"
+                                data-translate="stat-exp">Tahun Pengalaman</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-extrabold text-brand-600 mb-1">500+</p>
+                            <p class="text-xs text-slate-500 font-bold uppercase tracking-wider"
+                                data-translate="stat-unit">Unit Terinstal</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-extrabold text-brand-600 mb-1">24/7</p>
+                            <p class="text-xs text-slate-500 font-bold uppercase tracking-wider"
+                                data-translate="stat-support">Dukungan Teknis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Categories Section -->
+    <section id="industries"
+        class="py-16 md:py-24 relative bg-white bg-grid-pattern overflow-hidden border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16" data-aos="fade-up">
+                <h2 class="text-2xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight"
+                    data-translate="ind-title">
+                    Apa Kategori Industri Anda?
+                </h2>
+                <p class="text-sm md:text-base text-slate-600 mb-6" data-translate="ind-desc">
+                    Kami menyediakan teknologi deteksi kontaminan dan sortir material presisi tinggi yang disesuaikan
+                    khusus dengan karakteristik serta standar audit sektor industri Anda.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+                <!-- Food Industry -->
+                <div class="bg-white/80 backdrop-blur-md p-6 md:p-8 rounded-2xl border border-slate-200 flex flex-col sm:flex-row gap-4 md:gap-6 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-14 h-14 md:w-16 md:h-16 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center text-xl md:text-2xl flex-shrink-0 border border-brand-100 mx-auto sm:mx-0">
+                        <i class="fa-solid fa-bowl-food"></i>
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <span
+                            class="inline-block px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full mb-2"
+                            data-translate="food-ind">Food Industry</span>
+                        <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-2" data-translate="food-title">
+                            Industri Pangan & Makanan</h3>
+                        <p class="text-sm md:text-base text-slate-600" data-translate="food-desc">Solusi inspeksi
+                            kontaminan (logam, kaca, atau benda asing) untuk produk cair, bubuk, pasta, maupun kemasan.
+                            Memastikan keamanan produk konsumen serta memenuhi standar audit mutu ketat seperti HACCP,
+                            BRC, dan IFS.</p>
+                    </div>
+                </div>
+
+                <!-- Plastic & Recycle Industry -->
+                <div class="bg-white/80 backdrop-blur-md p-6 md:p-8 rounded-2xl border border-slate-200 flex flex-col sm:flex-row gap-4 md:gap-6 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-14 h-14 md:w-16 md:h-16 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center text-xl md:text-2xl flex-shrink-0 border border-brand-100 mx-auto sm:mx-0">
+                        <i class="fa-solid fa-recycle"></i>
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <span
+                            class="inline-block px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full mb-2"
+                            data-translate="plastic-ind">Plastic & Recycle</span>
+                        <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-2" data-translate="plastic-title">
+                            Industri Plastik & Daur Ulang</h3>
+                        <p class="text-sm md:text-base text-slate-600" data-translate="plastic-desc">Sistem pemisah
+                            kontaminan logam dan pemurni material untuk pelet, regrind, serta flake plastik. Memproteksi
+                            mesin pencetak/ekstrusi dari kerusakan fisik dan meningkatkan kemurnian hasil daur ulang.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clean Contact Section -->
+    <section id="contact"
+        class="py-16 md:py-24 relative bg-white bg-grid-pattern overflow-hidden border-t border-slate-100">
+        <!-- Dekorasi Background -->
+        <div
+            class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-100 rounded-full mix-blend-multiply filter blur-[100px] opacity-70 transform translate-x-1/3 -translate-y-1/3 pointer-events-none">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-100 rounded-full mix-blend-multiply filter blur-[100px] opacity-70 transform -translate-x-1/3 translate-y-1/3 pointer-events-none">
+        </div>
+
+        <!-- max-w-7xl dan px-4 agar lebar maksimal di layar HP -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+
+            <!-- Padding diturunkan jadi p-6 di mobile, p-16 di desktop -->
+            <div
+                class="bg-white/80 backdrop-blur-xl border border-slate-200 rounded-3xl p-6 md:p-16 flex flex-col lg:flex-row gap-10 md:gap-16 shadow-2xl">
+
+                <!-- Contact Info -->
+                <div class="lg:w-5/12" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight"
+                        data-translate="contact-title">
+                        Mari Diskusikan<br>Kebutuhan Anda.
+                    </h2>
+                    <p class="text-sm md:text-base text-slate-600 mb-8 md:mb-10" data-translate="contact-desc">
+                        Tim teknis kami siap memberikan konsultasi gratis dan mendemonstrasikan bagaimana sistem kami
+                        menyesuaikan lini produksi spesifik Anda.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 md:block hidden h-12 rounded-xl bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-600 flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Headquarters
+                                </p>
+                                <p class="text-sm md:text-base text-slate-800 font-medium">Jl. Industri Presisi Blok A
+                                    No. 1<br>Kawasan Industri Terpadu Surabaya, 60293</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 md:block hidden h-12 rounded-xl bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-600 flex-shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Direct Line
+                                </p>
+                                <p class="text-sm md:text-base text-slate-800 font-medium">+62 31 5555 7777</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 md:block hidden h-12 rounded-xl bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-600 flex-shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Email</p>
+                                <p class="text-sm md:text-base text-slate-800 font-medium">inquiry@mas-tech.co.id</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simple Form -->
+                <div class="lg:w-7/12" data-aos="fade-up">
+                    <!-- Padding form diturunkan jadi p-5 di mobile -->
+                    <form
+                        class="space-y-4 md:space-y-5 bg-white p-5 md:p-8 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1.5"
+                                    data-translate="lbl-fname">Nama Depan</label>
+                                <input type="text" data-translate-ph="ph-fname"
+                                    class="w-full px-4 py-3 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder-slate-400"
+                                    placeholder="Budi">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1.5"
+                                    data-translate="lbl-cname">Nama Perusahaan</label>
+                                <input type="text" data-translate-ph="ph-cname"
+                                    class="w-full px-4 py-3 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder-slate-400"
+                                    placeholder="PT Contoh Industri">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1.5"
+                                data-translate="lbl-email">Email Perusahaan</label>
+                            <input type="email" data-translate-ph="ph-email"
+                                class="w-full px-4 py-3 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder-slate-400"
+                                placeholder="budi@perusahaan.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1.5"
+                                data-translate="lbl-msg">Pesan / Jenis Mesin yang Dicari</label>
+                            <textarea rows="3" data-translate-ph="ph-msg"
+                                class="w-full px-4 py-3 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder-slate-400"
+                                placeholder="Kami mencari Metal Detector..."></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-brand-600 text-white font-bold py-3.5 px-4 rounded-lg hover:bg-brand-700 transition-all duration-300"
+                            data-translate="btn-send">
+                            Kirim Pesan Penawaran
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+        class="hidden md:block bg-white text-slate-500 py-6 text-sm text-center border-t border-slate-200 font-medium">
+        <p data-translate="footer-txt">&copy; 2026 PT Lorem Ipsum Indonesia. Quality Inspection Solutions.</p>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281234567890" target="_blank"
+        class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white rounded-2xl w-14 h-14 flex items-center justify-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50, duration: 800, easing: 'ease-out-cubic' });
+
+        // Navbar Scroll Logic
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.remove('-translate-y-full', 'opacity-0');
+                navbar.classList.add('translate-y-0', 'opacity-100');
+            } else {
+                navbar.classList.remove('translate-y-0', 'opacity-100');
+                navbar.classList.add('-translate-y-full', 'opacity-0');
+            }
+        });
+
+        // Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 3D Tilt Logic (Only for Desktop/Mouse interaction)
+        document.addEventListener("DOMContentLoaded", () => {
+            const visualContainer = document.getElementById('hero-visual');
+            const heroCard = document.getElementById('hero-card');
+
+            if (visualContainer && heroCard && window.innerWidth >= 768) {
+                visualContainer.addEventListener('mousemove', (e) => {
+                    const rect = visualContainer.getBoundingClientRect();
+                    const x = e.clientX - rect.left - (rect.width / 2);
+                    const y = e.clientY - rect.top - (rect.height / 2);
+                    const rotateX = -(y / 25);
+                    const rotateY = (x / 25);
+                    heroCard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                });
+                visualContainer.addEventListener('mouseleave', () => {
+                    heroCard.style.transform = `rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+                });
+            }
+        });
+
+        // === FITUR PENGGANTI BAHASA (MULTI-LANGUAGE) ===
+        const translations = {
+            id: {
+                "nav-service": "Layanan & Produk",
+                "nav-gallery": "Galeri",
+                "nav-contact": "Kontak",
+                "hero-title": "Agen Terpercaya untuk <span class='text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400'>Metal Detector.</span>",
+                "hero-desc": "Berdiri sejak 1978, \"PT Lorem Ipsum\" berkomitmen menyediakan peralatan keamanan pangan yang memenuhi standar HACCP, BRC, FSSC, dll. Fokus utama kami adalah penjualan dan layanan purna jual merek global Sesotec di Indonesia.",
+                "hero-btn": "Tentang Kami",
+                "hero-btn-scn": "Layanan & Produk",
+                "about-title": "Mitra Andal untuk Kebutuhan Industri Sejak 2010",
+                "about-desc1": "PT Lorem Ipsum hadir sebagai jembatan antara kebutuhan industri yang kompleks dengan teknologi inspeksi tercanggih. Kami memahami bahwa satu cacat produk yang lolos dapat menghancurkan kepercayaan konsumen bertahun-tahun.",
+                "about-desc2": "Oleh karena itu, kami tidak hanya menjual mesin, tetapi merancang sistem pertahanan kualitas (Quality Defense System) yang terintegrasi langsung dengan lini produksi manufaktur, makanan, farmasi, dan logistik Anda.",
+                "stat-exp": "Tahun Pengalaman",
+                "stat-unit": "Unit Terinstal",
+                "stat-support": "Dukungan Teknis",
+                "ind-title": "Apa Kategori Industri Anda?",
+                "ind-desc": "Kami menyediakan teknologi deteksi kontaminan dan sortir material presisi tinggi yang disesuaikan khusus dengan karakteristik serta standar audit sektor industri Anda.",
+                "food-ind": "Food Industry",
+                "food-title": "Industri Pangan & Makanan",
+                "food-desc": "Solusi inspeksi kontaminan (logam, kaca, atau benda asing) untuk produk cair, bubuk, pasta, maupun kemasan. Memastikan keamanan produk konsumen serta memenuhi standar audit mutu ketat seperti HACCP, BRC, dan IFS.",
+                "plastic-ind": "Plastic & Recycle",
+                "plastic-title": "Industri Plastik & Daur Ulang",
+                "plastic-desc": "Sistem pemisah kontaminan logam dan pemurni material untuk pelet, regrind, serta flake plastik. Memproteksi mesin pencetak/ekstrusi dari kerusakan fisik dan meningkatkan kemurnian hasil daur ulang.",
+                "contact-title": "Mari Diskusikan<br>Kebutuhan Anda.",
+                "contact-desc": "Tim teknis kami siap memberikan konsultasi gratis dan mendemonstrasikan bagaimana sistem kami menyesuaikan lini produksi spesifik Anda.",
+                "lbl-fname": "Nama Depan",
+                "lbl-cname": "Nama Perusahaan",
+                "lbl-email": "Email Perusahaan",
+                "lbl-msg": "Pesan / Jenis Mesin yang Dicari",
+                "btn-send": "Kirim Pesan Penawaran",
+                "footer-txt": "&copy; 2026 PT Lorem Ipsum Indonesia. Solusi Inspeksi Mutu.",
+                "wa-tooltip": "Live Chat B2B"
+            },
+            en: {
+                "nav-service": "Services & Products",
+                "nav-gallery": "Gallery",
+                "nav-contact": "Contact",
+                "hero-title": "Trusted Agent for <span class='text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400'>Metal Detector.</span>",
+                "hero-desc": "Established in 1978, \"PT Lorem Ipsum\" is committed to supplying food safety equipment that meets HACCP, BRC, FSSC, and other standards. Our primary focus is the sales and after-sales service of the global brand Sesotec within Indonesia.",
+                "hero-btn": "About Us",
+                "hero-btn-scn": "Services & Products",
+                "about-title": "Reliable Partner for Industrial Needs Since 2010",
+                "about-desc1": "PT Lorem Ipsum serves as a bridge between complex industrial needs and cutting-edge inspection technology. We understand that a single product defect can destroy years of consumer trust.",
+                "about-desc2": "Therefore, we don't just sell machines, but design an integrated Quality Defense System directly linked to your manufacturing, food, pharmaceutical, and logistics production lines.",
+                "stat-exp": "Years Experience",
+                "stat-unit": "Units Installed",
+                "stat-support": "Technical Support",
+                "ind-title": "What is Your Industry Category?",
+                "ind-desc": "We provide high-precision contaminant detection and material sorting technology tailored to the characteristics and audit standards of your industrial sector.",
+                "food-ind": "Food & Beverage",
+                "food-title": "Food & Beverage Industry",
+                "food-desc": "Contaminant inspection solutions (metal, glass, or foreign objects) for liquid, powder, paste, and packaged products. Ensuring consumer product safety and meeting strict quality audit standards such as HACCP, BRC, and IFS.",
+                "plastic-ind": "Plastic & Recycle",
+                "plastic-title": "Plastic & Recycling Industry",
+                "plastic-desc": "Metal contaminant separation systems and material purifiers for plastic pellets, regrind, and flakes. Protecting molding/extrusion machines from physical damage and improving recycling purity.",
+                "contact-title": "Let's Discuss<br>Your Needs.",
+                "contact-desc": "Our technical team is ready to provide free consultations and demonstrate how our systems fit your specific production line.",
+                "lbl-fname": "First Name",
+                "lbl-cname": "Company Name",
+                "lbl-email": "Company Email",
+                "lbl-msg": "Message / Machine Type Needed",
+                "btn-send": "Send Quotation Request",
+                "footer-txt": "&copy; 2026 PT Lorem Ipsum Indonesia. Quality Inspection Solutions.",
+                "wa-tooltip": "Live Chat B2B"
+            }
+        };
+
+        const placeholders = {
+            id: {
+                "ph-fname": "Budi",
+                "ph-cname": "PT Contoh Industri",
+                "ph-email": "budi@perusahaan.com",
+                "ph-msg": "Kami mencari Metal Detector untuk lini produksi makanan beku..."
+            },
+            en: {
+                "ph-fname": "John Doe",
+                "ph-cname": "Example Industry Inc",
+                "ph-email": "john@company.com",
+                "ph-msg": "We are looking for a Metal Detector for our frozen food production line..."
+            }
+        };
+
+        let currentLang = 'id';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.querySelectorAll('[data-translate]').forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if (translations[lang][key]) el.innerHTML = translations[lang][key];
+            });
+            document.querySelectorAll('[data-translate-ph]').forEach(el => {
+                const key = el.getAttribute('data-translate-ph');
+                if (placeholders[lang][key]) el.placeholder = placeholders[lang][key];
+            });
+
+            const activeClasses = ['text-brand-600', 'font-bold'];
+            ['desktop', 'mobile'].forEach(type => {
+                const btnID = document.getElementById(`btn-id-${type}`);
+                const btnEN = document.getElementById(`btn-en-${type}`);
+                if (lang === 'id') {
+                    btnID.classList.add(...activeClasses);
+                    btnEN.classList.remove(...activeClasses);
+                } else {
+                    btnEN.classList.add(...activeClasses);
+                    btnID.classList.remove(...activeClasses);
+                }
+            });
+        }
+
+        const toggleLang = () => setLanguage(currentLang === 'id' ? 'en' : 'id');
+        document.getElementById('langToggleDesktop').addEventListener('click', toggleLang);
+        document.getElementById('langToggleMobile').addEventListener('click', toggleLang);
+
+        setLanguage('id');
+    </script>
+</body>
+
+</html>
