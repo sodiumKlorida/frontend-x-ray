@@ -81,7 +81,7 @@
             <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
                 <a href="index.html" class="hover:text-brand-600 transition-colors">Beranda</a>
                 <a href="product.html" class="hover:text-brand-600 transition-colors">Layanan & Produk</a>
-                <a href="#galeri" class="text-brand-600 transition-colors">Galeri</a>
+                <a href="#" class="text-brand-600 transition-colors">Galeri</a>
                 <a href="index.html#contact" class="hover:text-brand-600 transition-colors">Contact</a>
             </div>
 
@@ -100,6 +100,17 @@
                 <button id="mobile-menu-btn" class="text-slate-800 focus:outline-none">
                     <i class="fa-solid fa-bars text-xl"></i>
                 </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel (Baru) -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl transition-all duration-300">
+            <div class="px-6 py-4 flex flex-col space-y-4 text-sm font-semibold text-slate-700">
+                <a href="index.html" class="hover:text-brand-600" data-translate="nav-service">Beranda</a>
+                <a href="product.html" class="hover:text-brand-600" data-translate="nav-service">Layanan & Produk</a>
+                <a href="#" class="hover:text-brand-600">Galeri</a>
+                <a href="index.html#contact" class="hover:text-brand-600" data-translate="nav-contact">Contact</a>
             </div>
         </div>
     </nav>
@@ -288,6 +299,14 @@
         AOS.init({
             once: true,
             offset: 50,
+        });
+
+        // Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
 
         // Add dropshadow to navbar on scroll
