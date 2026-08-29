@@ -1,0 +1,86 @@
+.bg-grid-pattern {
+    background-image:
+        linear-gradient(to right, #f1f5f9 1px, transparent 1px),
+        linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.glass-nav {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.product-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: #3b82f6;
+}
+
+/* Target untuk laptop 14 inci (biasanya memiliki rentang lebar layar 1024px hingga 1440px) */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .home {
+        /* Mengurangi tinggi agar terlihat lebih kecil (tidak full screen) */
+        min-height: 80vh !important;
+
+        gap: 5rem;
+
+        /* Memberikan padding horizontal (padding-x) */
+        padding-left: 4rem;
+        /* setara px-16 di Tailwind */
+        padding-right: 4rem;
+
+        /* Opsional: Anda bisa memperkecil skala konten (zoom out) jika diinginkan */
+        transform: scale(0.95);
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .about {
+        /* Mengurangi tinggi agar terlihat lebih kecil (tidak full screen) */
+
+        /* Memberikan padding horizontal (padding-x) */
+        padding-left: 4rem;
+        /* setara px-16 di Tailwind */
+        padding-right: 4rem;
+
+        /* Opsional: Anda bisa memperkecil skala konten (zoom out) jika diinginkan */
+        transform: scale(0.95);
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .category {
+
+        /* Memberikan padding horizontal (padding-x) */
+        padding-left: 2rem;
+        /* setara px-16 di Tailwind */
+        padding-right: 2rem;
+
+        /* Opsional: Anda bisa memperkecil skala konten (zoom out) jika diinginkan */
+        transform: scale(0.95);
+    }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+    .home, .about {
+        /* Sesuaikan tinggi atau padding untuk layar yang lebih luas */
+        max-width: 85%;
+        gap: 10rem;
+    }
+}
+
+
+/* mobile */
+@media screen and (max-width: 767px) {
+    /* CSS Anda untuk mobile diletakkan di sini */
+    .about, .home {
+        /* border: 1px solid black; */
+        max-width: 88%;
+    }
+}

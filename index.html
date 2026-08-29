@@ -44,31 +44,10 @@
     <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <style>
-        .bg-grid-pattern {
-            background-image:
-                linear-gradient(to right, #f1f5f9 1px, transparent 1px),
-                linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
+    <!-- CSS -->
+    <link rel="stylesheet" href="/frontend-x-ray/style.css">
 
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
-        }
 
-        .product-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            border-color: #3b82f6;
-        }
-    </style>
 </head>
 
 <body class="font-sans text-slate-800 bg-white overflow-x-hidden selection:bg-brand-500 selection:text-white">
@@ -138,7 +117,8 @@
             class="absolute bottom-0 right-0 w-96 h-96 bg-brand-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 transform translate-x-1/2 translate-y-1/2">
         </div>
 
-        <div class="max-w-7xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+        <!-- <div class="home max-w-7xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center"> -->
+        <div class="home relative z-10 grid md:grid-cols-2 items-center">
             <!-- Text Content -->
             <div data-aos="fade-right" data-aos-duration="1000" class="text-center md:text-left mt-0">
                 <div
@@ -186,23 +166,22 @@
             <!-- Image/Visual Concept (Diperbaiki untuk Mobile) -->
             <div id="hero-visual" class="relative group perspective-1000 mt-12 md:mt-0" data-aos="fade-left"
                 data-aos-duration="1200" style="perspective: 1000px;">
-                <div id="hero-card"
-                    class="relative rounded-2xl shadow-2xl border border-slate-100 bg-white transition-transform duration-100 ease-out will-change-transform mx-auto max-w-sm md:max-w-full"
+                <div id="hero-card" class="relative rounded-2xl shadow-2xl border border-slate-100 bg-white transition-transform duration-100 ease-out will-change-transform mx-auto max-w-sm md:max-w-full"
                     style="transform-style: preserve-3d;">
-                    <img src="/assets/MD-Sesotec.jpg" alt="High Tech Metal Detector Machinery"
-                        class="w-full backdrop-blur-md p-2 rounded-xl shadow-lg border border-slate-200/60 h-auto object-cover opacity-90 scale-100 md:scale-105 group-hover:scale-105 md:group-hover:scale-110 transition-transform duration-300">
+                    <img src="/frontend-x-ray/assets/MD-Sesotec.jpg" alt="High Tech Metal Detector Machinery"
+                        class="image-hero w-full backdrop-blur-md p-2 rounded-xl shadow-lg border border-slate-200/60 h-auto object-cover opacity-90 scale-100 md:scale-105 group-hover:scale-105 md:group-hover:scale-110 transition-transform duration-300">
 
                     <!-- Posisi absolut diatur ulang agar tidak overlap di layar kecil -->
                     <div class="absolute -top-8 left-0 md:-top-[7rem] md:left-[3rem] backdrop-blur-md p-1.5 md:p-2 rounded-xl shadow-lg border border-slate-200/60 z-10 w-20 h-20 md:w-48 md:h-48 flex items-center justify-center bg-white"
                         style="transform: translateZ(40px);">
-                        <img src="/assets/RAPID_5000-1.jpg" alt="Detail Spec"
-                            class="w-full h-full object-cover rounded-lg border border-slate-100">
+                        <img src="/frontend-x-ray/assets/RAPID_5000-1.jpg" alt="Detail Spec"
+                            class="image-hero w-full h-full object-cover rounded-lg border border-slate-100">
                     </div>
 
                     <div class="absolute border -bottom-8 right-0 md:-bottom-[7rem] md:right-4 backdrop-blur-md p-1.5 md:p-2 rounded-xl shadow-lg border border-slate-200/60 z-10 w-20 h-20 md:w-48 md:h-48 flex items-center justify-center bg-white"
                         style="transform: translateZ(40px);">
-                        <img src="/assets/sesotec-raycon-xray.jpg" alt="Detail Spec"
-                            class="w-full h-full object-cover rounded-lg border border-slate-100">
+                        <img src="/frontend-x-ray/assets/sesotec-raycon-xray.jpg" alt="Detail Spec"
+                            class="image-hero w-full h-full object-cover rounded-lg border border-slate-100">
                     </div>
                 </div>
             </div>
@@ -213,12 +192,13 @@
 
     <!-- Parallax Section (About) -->
     <section id="about"
-        class="pt-16 md:py-16 border-2 borrder-2 md:py-24 relative bg-white bg-grid-pattern overflow-hidden border-t border-slate-100">
+        class="pt-16 md:py-16 md:py-24 relative bg-white bg-grid-pattern overflow-hidden">
         <div
             class="absolute top-10 left-10 w-80 h-80 bg-brand-100 rounded-full mix-blend-multiply filter blur-3xl opacity-60">
         </div>
 
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <!-- <div class="about max-w-7xl mx-auto px-6 relative z-10"> -->
+        <div class="about mx-auto relative z-10">
             <!-- Gap diperkecil di mobile (gap-12 md:gap-[5rem]) -->
             <div class="grid md:grid-cols-2 gap-12 md:gap-[5rem] items-center">
 
@@ -273,7 +253,7 @@
 
     <!-- Industry Categories Section -->
     <section id="industries"
-        class="py-16 md:py-24 relative bg-white bg-grid-pattern overflow-hidden border-t border-slate-100">
+        class="py-16 md:py-24 relative bg-white bg-grid-pattern overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16" data-aos="fade-up">
                 <h2 class="text-2xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight"
@@ -286,7 +266,7 @@
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+            <div class="category grid md:grid-cols-2 gap-6 md:gap-8">
                 <!-- Food Industry -->
                 <div class="bg-white/80 backdrop-blur-md p-6 md:p-8 rounded-2xl border border-slate-200 flex flex-col sm:flex-row gap-4 md:gap-6 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                     data-aos="fade-up" data-aos-delay="100">
@@ -295,9 +275,7 @@
                         <i class="fa-solid fa-bowl-food"></i>
                     </div>
                     <div class="text-center sm:text-left">
-                        <span
-                            class="inline-block px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full mb-2"
-                            data-translate="food-ind">Food Industry</span>
+
                         <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-2" data-translate="food-title">
                             Industri Pangan & Makanan</h3>
                         <p class="text-sm md:text-base text-slate-600" data-translate="food-desc">Solusi inspeksi
@@ -315,9 +293,7 @@
                         <i class="fa-solid fa-recycle"></i>
                     </div>
                     <div class="text-center sm:text-left">
-                        <span
-                            class="inline-block px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full mb-2"
-                            data-translate="plastic-ind">Plastic & Recycle</span>
+
                         <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-2" data-translate="plastic-title">
                             Industri Plastik & Daur Ulang</h3>
                         <p class="text-sm md:text-base text-slate-600" data-translate="plastic-desc">Sistem pemisah
@@ -361,9 +337,11 @@
 
                     <div class="space-y-6">
                         <div class="flex items-start gap-4">
-                            <div
-                                class="w-12 md:block hidden h-12 rounded-xl bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-600 flex-shrink-0">
-                                <i class="fa-solid fa-location-dot"></i>
+                            <div class="hidden md:block">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-600 flex-shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
                             </div>
                             <div>
                                 <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Headquarters
@@ -373,9 +351,11 @@
                             </div>
                         </div>
                         <div class="flex items-center gap-4">
-                            <div
-                                class="w-12 md:block hidden h-12 rounded-xl bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-600 flex-shrink-0">
-                                <i class="fa-solid fa-phone"></i>
+                            <div class="hidden md:block">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-600 flex-shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
                             </div>
                             <div>
                                 <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Direct Line
@@ -384,9 +364,11 @@
                             </div>
                         </div>
                         <div class="flex items-center gap-4">
-                            <div
-                                class="w-12 md:block hidden h-12 rounded-xl bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-600 flex-shrink-0">
-                                <i class="fa-solid fa-envelope"></i>
+                            <div class="hidden md:block">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-600 flex-shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
                             </div>
                             <div>
                                 <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Email</p>
