@@ -40,6 +40,18 @@
     }
 }
 
+/* animasi hero */
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 6s ease infinite;
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
     .about {
         /* Mengurangi tinggi agar terlihat lebih kecil (tidak full screen) */
@@ -67,10 +79,11 @@
     }
 }
 
+/* > 15inch */
 @media screen and (min-width: 1441px) and (max-width: 1920px) {
     .home, .about {
         /* Sesuaikan tinggi atau padding untuk layar yang lebih luas */
-        max-width: 85%;
+        max-width: 88%;
         gap: 10rem;
     }
 }

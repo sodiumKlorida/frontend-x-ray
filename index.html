@@ -121,8 +121,9 @@
         <div class="home relative z-10 grid md:grid-cols-2 items-center">
             <!-- Text Content -->
             <div data-aos="fade-right" data-aos-duration="1000" class="text-center md:text-left mt-0">
+                <!-- Badge -->
                 <div
-                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xs font-bold uppercase tracking-wider mb-6">
+                    class="inline-flex items-center gap-2 px-3 shadow-md py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xs font-bold uppercase tracking-wider mb-6">
                     <span class="relative flex h-2 w-2">
                         <span
                             class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
@@ -131,42 +132,50 @@
                     PT Lorem Ipsum
                 </div>
 
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.2] md:leading-[1.15] mb-6"
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-6 max-w-2xl"
                     data-translate="hero-title">
-                    Agen Terpercaya untuk <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400">Metal
-                        Detector.</span>
+                    Agen Terpercaya untuk
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-l from-slate-500 via-blue-950 to-indigo-900 bg-[length:200%_auto] animate-gradient">
+                        Inspeksi Mesin
+                    </span>
+                    <span class="text-slate-900 font-extrabold">&amp;</span>
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-l from-blue-900 via-slate-600 to-cyan-500 bg-[length:200%_auto] animate-gradient">
+                        Sistem Magnet Neodymium
+                    </span>
                 </h1>
 
-                <p class="text-sm md:text-md text-slate-600 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed"
+                <!-- Description (Kontras Diperbaiki) -->
+                <p class="text-base text-slate-600 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed font-normal"
                     data-translate="hero-desc">
-                    Berdiri sejak 1978, "PT Lorem Ipsum" berkomitmen menyediakan peralatan keamanan pangan yang memenuhi
-                    standar HACCP, BRC, FSSC, dll. Fokus utama kami adalah penjualan dan layanan purna jual merek global
-                    Sesotec di Indonesia.
+                    Berdiri sejak 2026, PT Lorem Ipsum berkomitmen menyediakan peralatan dan jasa untuk menunjang
+                    keamanan pangan yang memenuhi standar HACCP, BRC, FSSC, dll.
                 </p>
 
-                <div class="flex gap-5 justify-center md:justify-normal">
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#about"
-                            class="bg-brand-600 text-white font-semibold px-6 py-3.5 rounded-lg hover:bg-brand-700 hover:shadow-lg hover:shadow-brand-500/30 transition-all flex items-center gap-2"
-                            data-translate="hero-btn">
-                            Tentang Kami
-                        </a>
-                    </div>
-                    <div class="flex flex-wrap gap-4 hidden md:block">
-                        <a href="product.html"
-                            class="bg-brand-600 text-white font-semibold px-6 py-3.5 rounded-lg hover:bg-brand-700 hover:shadow-lg hover:shadow-brand-500/30 transition-all flex items-center gap-2"
-                            data-translate="hero-btn-scn">
-                            Layanan & Produk
-                        </a>
-                    </div>
+                <!-- Buttons (Diperbaiki Hierarkinya) -->
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start items-center">
+                    <!-- Tombol Utama (Primary) -->
+                    <a href="#about"
+                        class="bg-brand-600 text-white font-semibold px-6 py-3.5 rounded-xl hover:bg-brand-700 hover:shadow-lg hover:shadow-brand-500/25 transition-all flex items-center gap-2"
+                        data-translate="hero-btn">
+                        Tentang Kami
+                    </a>
+
+                    <!-- Tombol Sekunder (Secondary) -->
+                    <a href="product.html"
+                        class="bg-white text-slate-800 font-semibold px-6 py-3.5 rounded-xl border border-slate-200 hover:bg-slate-50 hover:border-slate-300 transition-all flex items-center gap-2 shadow-sm"
+                        data-translate="hero-btn-scn">
+                        Layanan &amp; Produk
+                    </a>
                 </div>
             </div>
 
             <!-- Image/Visual Concept (Diperbaiki untuk Mobile) -->
             <div id="hero-visual" class="relative group perspective-1000 mt-12 md:mt-0" data-aos="fade-left"
                 data-aos-duration="1200" style="perspective: 1000px;">
-                <div id="hero-card" class="relative rounded-2xl shadow-2xl border border-slate-100 bg-white transition-transform duration-100 ease-out will-change-transform mx-auto max-w-sm md:max-w-full"
+                <div id="hero-card"
+                    class="relative rounded-2xl shadow-2xl border border-slate-100 bg-white transition-transform duration-100 ease-out will-change-transform mx-auto max-w-sm md:max-w-full"
                     style="transform-style: preserve-3d;">
                     <img src="./assets/MD-Sesotec.jpg" alt="High Tech Metal Detector Machinery"
                         class="image-hero w-full backdrop-blur-md p-2 rounded-xl shadow-lg border border-slate-200/60 h-auto object-cover opacity-90 scale-100 md:scale-105 group-hover:scale-105 md:group-hover:scale-110 transition-transform duration-300">
@@ -186,13 +195,10 @@
                 </div>
             </div>
         </div>
-
-        <!-- <div class="absolute bottom-0 w-full h-7 bg-gradient-to-t from-white to-transparent backdrop-blur-[2px] z-20 pointer-events-none"></div> -->
     </section>
 
     <!-- Parallax Section (About) -->
-    <section id="about"
-        class="pt-16 md:py-16 md:py-24 relative bg-white bg-grid-pattern overflow-hidden">
+    <section id="about" class="pt-16 md:py-16 md:py-24 relative bg-white bg-grid-pattern overflow-hidden">
         <div
             class="absolute top-10 left-10 w-80 h-80 bg-brand-100 rounded-full mix-blend-multiply filter blur-3xl opacity-60">
         </div>
@@ -252,8 +258,7 @@
     </section>
 
     <!-- Industry Categories Section -->
-    <section id="industries"
-        class="py-16 md:py-24 relative bg-white bg-grid-pattern overflow-hidden">
+    <section id="industries" class="py-16 md:py-24 relative bg-white bg-grid-pattern overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16" data-aos="fade-up">
                 <h2 class="text-2xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight"
@@ -495,13 +500,13 @@
                 "nav-service": "Layanan & Produk",
                 "nav-gallery": "Galeri",
                 "nav-contact": "Kontak",
-                "hero-title": "Agen Terpercaya untuk <span class='text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400'>Metal Detector.</span>",
-                "hero-desc": "Berdiri sejak 1978, \"PT Lorem Ipsum\" berkomitmen menyediakan peralatan keamanan pangan yang memenuhi standar HACCP, BRC, FSSC, dll. Fokus utama kami adalah penjualan dan layanan purna jual merek global Sesotec di Indonesia.",
+                //"hero-title": "Agen Terpercaya untuk <span class='text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400'>Inspeksi Mesin <span class="">&</span> Sistem Magnet Neodynium</span>",
+                //"hero-desc": "Berdiri sejak 1978, \"PT Lorem Ipsum\" berkomitmen menyediakan peralatan keamanan pangan yang memenuhi standar HACCP, BRC, FSSC, dll. Fokus utama kami adalah penjualan dan layanan purna jual merek global Sesotec di Indonesia.",
                 "hero-btn": "Tentang Kami",
                 "hero-btn-scn": "Layanan & Produk",
-                "about-title": "Mitra Andal untuk Kebutuhan Industri Sejak 2010",
-                "about-desc1": "PT Lorem Ipsum hadir sebagai jembatan antara kebutuhan industri yang kompleks dengan teknologi inspeksi tercanggih. Kami memahami bahwa satu cacat produk yang lolos dapat menghancurkan kepercayaan konsumen bertahun-tahun.",
-                "about-desc2": "Oleh karena itu, kami tidak hanya menjual mesin, tetapi merancang sistem pertahanan kualitas (Quality Defense System) yang terintegrasi langsung dengan lini produksi manufaktur, makanan, farmasi, dan logistik Anda.",
+                //"about-title": "Mitra Andal untuk Kebutuhan Industri Sejak 2010",
+                //"about-desc1": "PT Lorem Ipsum hadir sebagai jembatan antara kebutuhan industri yang kompleks dengan teknologi inspeksi tercanggih. Kami memahami bahwa satu cacat produk yang lolos dapat menghancurkan kepercayaan konsumen bertahun-tahun.",
+                //"about-desc2": "Oleh karena itu, kami tidak hanya menjual mesin, tetapi merancang sistem pertahanan kualitas (Quality Defense System) yang terintegrasi langsung dengan lini produksi manufaktur, makanan, farmasi, dan logistik Anda.",
                 "stat-exp": "Tahun Pengalaman",
                 "stat-unit": "Unit Terinstal",
                 "stat-support": "Dukungan Teknis",
