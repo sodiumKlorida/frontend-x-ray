@@ -28,7 +28,7 @@
         /* Mengurangi tinggi agar terlihat lebih kecil (tidak full screen) */
         min-height: 80vh !important;
 
-        gap: 5rem;
+        gap: 6rem;
 
         /* Memberikan padding horizontal (padding-x) */
         padding-left: 4rem;
