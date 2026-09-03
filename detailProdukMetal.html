@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk - 5 Gambar</title>
+    <!-- Tailwind CSS (Gunakan CDN atau build lokal Anda) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 min-h-screen p-8">
+
+    <div class="max-w-6xl mx-auto">
+        <!-- Header & Tombol Kembali -->
+        <div class="mb-8 flex items-center justify-between">
+            <div>
+                <h1 class="text-3xl font-bold text-slate-900 mb-2">Katalog Produk Pendeteksi Metal</h1>
+                <p class="text-slate-600">Tampilan detail mesin dari berbagai sudut.</p>
+            </div>
+            <a href="product.html" class="bg-white border border-slate-200 px-4 py-2 rounded-lg shadow-sm hover:bg-slate-50 transition-colors text-slate-700 font-medium flex items-center gap-2">
+                <i class="fa-solid fa-arrow-left"></i> Kembali
+            </a>
+        </div>
+
+        <!-- Grid 5 Card Gambar -->
+        <!-- Menggunakan grid: 1 kolom di HP, 2 di Tablet, 3 di Desktop -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Card Gambar 1 -->
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                <div class="h-64 overflow-hidden bg-slate-100">
+                    <img src="./assets/metal/51.webp" alt="Tampak Depan" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="p-4 border-t border-slate-100">
+                    <h3 class="font-bold text-slate-800">Nama Produk</h3>
+                    <p class="text-sm text-slate-500">Tampilan panel kontrol utama</p>
+                </div>
+            </div>
+
+            <!-- Card Gambar 2 -->
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                <div class="h-64 overflow-hidden bg-slate-100">
+                    <img src="./assets/metal/file_01629430841736.webp" alt="Tampak Samping" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="p-4 border-t border-slate-100">
+                    <h3 class="font-bold text-slate-800">Nama Produk</h3>
+                    <p class="text-sm text-slate-500">Detail belt conveyor</p>
+                </div>
+            </div>
+
+            <!-- Card Gambar 3 -->
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                <div class="h-64 overflow-hidden bg-slate-100">
+                    <img src="./assets/metal/for.webp" alt="Tampak Belakang" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="p-4 border-t border-slate-100">
+                    <h3 class="font-bold text-slate-800">Nama Produk</h3>
+                    <p class="text-sm text-slate-500">Sistem pembuangan (reject system)</p>
+                </div>
+            </div>
+
+            <!-- Card Gambar 4 -->
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                <div class="h-64 overflow-hidden bg-slate-100">
+                    <img src="./assets/metal/IMD-I-L-scaled-1.jpg" alt="Detail Sensor" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="p-4 border-t border-slate-100">
+                    <h3 class="font-bold text-slate-800">Nama Produk</h3>
+                    <p class="text-sm text-slate-500">Head detektor berpresisi tinggi</p>
+                </div>
+            </div>
+
+            <!-- Card Gambar 5 -->
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                <div class="h-64 overflow-hidden bg-slate-100">
+                    <img src="./assets/gambar5.webp" alt="Implementasi Pabrik" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="p-4 border-t border-slate-100">
+                    <h3 class="font-bold text-slate-800">Nama Produk</h3>
+                    <p class="text-sm text-slate-500">Contoh pemasangan di lini produksi</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
