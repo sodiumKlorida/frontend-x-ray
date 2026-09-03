@@ -28,7 +28,7 @@
         /* Mengurangi tinggi agar terlihat lebih kecil (tidak full screen) */
         min-height: 80vh !important;
 
-        gap: 6rem;
+        gap: 1rem;
 
         /* Memberikan padding horizontal (padding-x) */
         padding-left: 4rem;
@@ -37,6 +37,16 @@
 
         /* Opsional: Anda bisa memperkecil skala konten (zoom out) jika diinginkan */
         transform: scale(0.95);
+    }
+
+    #title-hero {
+        font-size: 43px;
+
+        max-width: 74%;
+    }
+
+    #footer {
+        max-width: 85%;
     }
 }
 

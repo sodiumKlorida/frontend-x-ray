@@ -132,7 +132,8 @@
                     PT Inovasi Cakrawal Solusi
                 </div>
 
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-6 max-w-2xl"
+                <h1 id="title-hero"
+                    class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-6 max-w-2xl"
                     data-translate="hero-title">
                     Agen Terpercaya untuk
                     <span
@@ -192,7 +193,7 @@
                     <!-- Floating Card 2: Kanan Atas -->
                     <div class="absolute -top-5 -right-3 md:-top-6 md:-right-8 backdrop-blur-md p-1.5 md:p-2 rounded-xl shadow-lg border border-slate-200/60 bg-white/90 z-20 w-24 h-16 sm:w-28 sm:h-20 md:w-52 md:h-32 flex items-center justify-center transition-transform duration-300 hover:scale-105"
                         style="transform: translateZ(40px);">
-                        <img src="./assets/Gemini_Generated_Image_l5qeidl5qeidl5qe.jpg" alt="Detail Spec 2"
+                        <img src="./assets/magnet/THUMBNAIL.png" alt="Detail Spec 2"
                             class="w-full h-full object-cover rounded-lg">
                     </div>
 
@@ -200,6 +201,14 @@
                     <div class="absolute -bottom-3 -right-3 md:-bottom-[3rem] md:-right-9 backdrop-blur-md p-1.5 md:p-2 rounded-xl shadow-lg border border-slate-200/60 bg-white/90 z-20 w-24 h-16 sm:w-28 sm:h-20 md:w-52 md:h-32 flex items-center justify-center transition-transform duration-300 hover:scale-105"
                         style="transform: translateZ(40px);">
                         <img src="./assets/063a5260.webp" alt="Detail Spec 3"
+                            class="w-full h-full object-cover rounded-lg">
+                    </div>
+
+                    <!-- Floating Card 4: Kiri Bawah (BARU DITAMBAHKAN) -->
+                    <div class="absolute -bottom-3 -left-3 md:-bottom-[3rem] md:-left-9 backdrop-blur-md p-1.5 md:p-2 rounded-xl shadow-lg border border-slate-200/60 bg-white/90 z-20 w-24 h-16 sm:w-28 sm:h-20 md:w-52 md:h-32 flex items-center justify-center transition-transform duration-300 hover:scale-105"
+                        style="transform: translateZ(40px);">
+                        <!-- JANGAN LUPA GANTI ATRIBUT SRC DI BAWAH INI DENGAN GAMBAR YANG ANDA INGINKAN -->
+                        <img src="./assets/gaussMeter/THUMBNAIL.webp" alt="Detail Spec 4"
                             class="w-full h-full object-cover rounded-lg">
                     </div>
 
@@ -443,15 +452,99 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer
-        class="hidden md:block bg-white text-slate-500 py-6 text-sm text-center border-t border-slate-200 font-medium">
-        <p data-translate="footer-txt">&copy; 2026 PT Inovasi Cakrawala Solusi. Quality Inspection Solutions.</p>
+    <!-- === BAGIAN FOOTER (BARU) === -->
+    <footer class="bg-slate-50 border-t border-slate-200 pt-16 pb-8">
+        <div id="footer" class="max-w-7xl mx-auto px-6">
+
+            <!-- Grid Layout (1 Kolom di HP, 3 Kolom di Desktop) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-12">
+
+                <!-- Kolom 1: Info Brand -->
+                <div>
+                    <!-- Logo (Menggunakan logo yang sama dengan Navbar) -->
+                    <a href="#home" class="flex items-center gap-2 mb-4">
+                        <div
+                            class="w-8 h-8 bg-brand-600 rounded flex items-center justify-center text-white font-bold text-sm">
+                            T</div>
+                        <span class="font-bold text-xl tracking-tight text-slate-900">Log<span
+                                class="text-brand-600">Go</span></span>
+                    </a>
+                    <p class="text-sm text-slate-600 leading-relaxed pr-0 md:pr-4" data-translate="footer-desc">
+                        PT Inovasi Cakrawala Solusi berkomitmen menyediakan peralatan dan jasa inspeksi mutu untuk
+                        menunjang keamanan pangan yang memenuhi standar industri tinggi.
+                    </p>
+                </div>
+
+                <!-- Kolom 2: Quick Links -->
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-5 uppercase text-sm tracking-wider"
+                        data-translate="footer-link-title">
+                        Quick Links
+                    </h3>
+                    <ul class="space-y-3 text-sm text-slate-600 font-medium">
+                        <li><a href="#home" class="hover:text-brand-600 transition-colors flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Beranda</a></li>
+                        <li><a href="#about" class="hover:text-brand-600 transition-colors flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Tentang Kami</a></li>
+                        <li><a href="product.html"
+                                class="hover:text-brand-600 transition-colors flex items-center gap-2"
+                                data-translate="nav-service"><i class="fa-solid fa-angle-right text-xs"></i> Layanan &
+                                Produk</a></li>
+                        <li><a href="gallery.html"
+                                class="hover:text-brand-600 transition-colors flex items-center gap-2"
+                                data-translate="nav-gallery"><i class="fa-solid fa-angle-right text-xs"></i> Galeri</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Kolom 3: Contact Info -->
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-5 uppercase text-sm tracking-wider"
+                        data-translate="footer-contact-title">
+                        Contact Us
+                    </h3>
+                    <ul class="space-y-4 text-sm text-slate-600 font-medium">
+                        <!-- Info Alamat -->
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-brand-600 w-4 text-center"></i>
+                            <span>Perum. The Taman Dhika A6-16,<br>Buduran, Sidoarjo 61252</span>
+                        </li>
+                        <!-- Info Telepon -->
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-brand-600 w-4 text-center"></i>
+                            <span>+62 819 3290 3670</span>
+                        </li>
+                        <!-- Info Email -->
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-brand-600 w-4 text-center"></i>
+                            <span>inovasicakrawalasolusi@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div
+                class="pt-8 border-t border-slate-200 text-center text-sm text-slate-500 font-medium flex flex-col md:flex-row justify-between items-center gap-4">
+                <p data-translate="footer-txt">&copy; 2026 PT Inovasi Cakrawala Solusi. Quality Inspection Solutions.
+                </p>
+
+                <!-- Social Media Icons Opsional -->
+                <div class="flex space-x-4 text-lg text-slate-400">
+                    <a href="#" class="hover:text-brand-600 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" class="hover:text-brand-600 transition-colors"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-brand-600 transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+
+        </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/6281932903670" target="_blank"
-        class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white rounded-2xl w-14 h-14 flex items-center justify-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+        class="fixed bottom-6 right-6 z-[99] bg-[#25D366] text-white rounded-2xl w-14 h-14 flex items-center justify-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
         <i class="fa-brands fa-whatsapp text-3xl"></i>
     </a>
 
@@ -499,7 +592,6 @@
             }
         });
 
-        // === FITUR PENGGANTI BAHASA (MULTI-LANGUAGE) ===
         const translations = {
             id: {
                 "nav-service": "Layanan & Produk",
@@ -527,6 +619,9 @@
                 "lbl-email": "Email Perusahaan",
                 "lbl-msg": "Pesan / Jenis Mesin yang Dicari",
                 "btn-send": "Kirim Pesan Penawaran",
+                "footer-desc": "PT Inovasi Cakrawala Solusi berkomitmen menyediakan peralatan dan jasa inspeksi mutu untuk menunjang keamanan pangan yang memenuhi standar industri tinggi.",
+                "footer-link-title": "Tautan Cepat",
+                "footer-contact-title": "Hubungi Kami",
                 "footer-txt": "&copy; 2026 PT Inovasi Cakrawala Solusi. Quality Inspection Solutions."
             },
             en: {
@@ -555,6 +650,9 @@
                 "lbl-email": "Company Email",
                 "lbl-msg": "Message / Machine Type Needed",
                 "btn-send": "Send Quotation Request",
+                "footer-desc": "PT Inovasi Cakrawala Solusi is committed to providing quality inspection equipment and services to support food safety meeting high industrial standards.",
+                "footer-link-title": "Quick Links",
+                "footer-contact-title": "Contact Us",
                 "footer-txt": "&copy; 2026 PT Inovasi Cakrawala Solusi. Quality Inspection Solutions."
             }
         };

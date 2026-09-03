@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk - 5 Gambar</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-slate-50 min-h-screen p-8">
+
+    <div class="max-w-6xl mx-auto">
+        <!-- Header & Tombol Kembali -->
+        <div class="mb-8 flex items-center justify-between">
+            <div>
+                <h1 class="text-3xl font-bold text-slate-900 mb-2">Katalog Produk Gauss Meter</h1>
+                <p class="text-slate-600">Tampilan detail mesin dari berbagai sudut. Klik pada produk untuk melihat
+                    detail.</p>
+            </div>
+            <a href="product.html"
+                class="bg-white border border-slate-200 px-4 py-2 rounded-lg shadow-sm hover:bg-slate-50 transition-colors text-slate-700 font-medium flex items-center gap-2">
+                <i class="fa-solid fa-arrow-left"></i> Kembali
+            </a>
+        </div>
+
+        <!-- Grid Card Produk -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Card Produk 1 -->
+            <div onclick="openModal('Gauss Meter Model A', './assets/gaussMeter/download.jpeg', 'Tampilan panel kontrol utama dengan tingkat akurasi tinggi untuk pengukuran medan magnet industri.', 'Spesifikasi: Rentang ukur luas, layar digital, kalibrasi otomatis.')"
+                class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer">
+                <div class="h-64 overflow-hidden bg-slate-100">
+                    <img src="./assets/gaussMeter/download.jpeg" alt="Tampak Depan"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="p-4 border-t border-slate-100">
+                    <h3 class="font-bold text-slate-800">Gauss Meter Model A</h3>
+                    <p class="text-sm text-slate-500">Tampilan panel kontrol utama</p>
+                </div>
+            </div>
+
+            <!-- Card Produk 2 -->
+            <div onclick="openModal('Gauss Meter TM5100', './assets/gaussMeter/TM5100 (2).webp', 'Sistem pembuangan (reject system) terintegrasi yang dirancang khusus untuk lini produksi berkecepatan tinggi.', 'Spesifikasi: High durability, fast response time, standard industri pangan.')"
+                class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer">
+                <div class="h-64 overflow-hidden bg-slate-100">
+                    <img src="./assets/gaussMeter/TM5100 (2).webp" alt="Tampak Belakang"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="p-4 border-t border-slate-100">
+                    <h3 class="font-bold text-slate-800">Gauss Meter TM5100</h3>
+                    <p class="text-sm text-slate-500">Sistem pembuangan (reject system)</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- === MODAL POPUP DETAIL PRODUK (BISA DI-SCROLL) === -->
+    <div id="productModal"
+        class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-[95%] w-full max-h-[95vh] flex flex-col overflow-hidden shadow-2xl transform transition-all scale-95 opacity-0 duration-300"
+            id="modalContainer">
+
+            <!-- 1. Modal Header (Tetap di atas, tidak ikut scroll) -->
+            <div class="flex justify-between items-center px-6 py-4 border-b border-slate-100 flex-shrink-0">
+                <h3 id="modalTitle" class="text-xl font-bold text-slate-900">Judul Produk</h3>
+                <button onclick="closeModal()"
+                    class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- 2. Modal Body (Bagian inilah yang akan bisa di-scroll jika kontennya panjang) -->
+            <div class="p-6 overflow-y-auto flex-grow">
+                <!-- Gambar Produk (Diperkecil dan proporsional) -->
+                <div
+                    class="mb-6 rounded-2xl overflow-hidden bg-slate-100 h-48 border border-slate-100 flex items-center justify-center p-2">
+                    <img id="modalImage" src="" alt="Detail Produk" class="max-w-full max-h-full object-contain">
+                </div>
+
+                <h4 class="font-semibold text-slate-800 mb-2">Deskripsi Produk</h4>
+                <p id="modalDesc" class="text-slate-600 text-sm leading-relaxed mb-4">Deskripsi lengkap produk akan
+                    muncul di sini.</p>
+
+                <div class="bg-brand-50 border border-brand-100 rounded-xl p-4 mb-2">
+                    <h5 class="text-xs font-bold text-brand-600 uppercase tracking-wider mb-1">Catatan Tambahan</h5>
+                    <p id="modalSpecs" class="text-xs text-slate-600">Spesifikasi rinci produk.</p>
+                </div>
+            </div>
+
+            <!-- 3. Modal Footer / Aksi (Tetap di bawah, tidak ikut scroll) -->
+            <div
+                class="px-6 py-4 border-t border-slate-100 bg-slate-50 flex items-center justify-end gap-3 flex-shrink-0">
+                <button onclick="closeModal()"
+                    class="px-5 py-2.5 rounded-xl border border-slate-200 text-slate-700 font-semibold hover:bg-slate-100 transition-colors text-sm">
+                    Tutup
+                </button>
+                <a id="modalWaBtn" href="#" target="_blank"
+                    class="px-5 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-semibold transition-colors text-sm flex items-center gap-2 shadow-sm">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Tanya Penawaran
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Skrip JavaScript untuk Modal -->
+    <script>
+        function openModal(title, imageSrc, desc, specs) {
+            const modal = document.getElementById('productModal');
+            const container = document.getElementById('modalContainer');
+
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('modalDesc').innerText = desc;
+            document.getElementById('modalSpecs').innerText = specs;
+
+            const waMessage = encodeURIComponent(`Halo, saya tertarik untuk mengetahui lebih lanjut mengenai produk: *${title}*`);
+            document.getElementById('modalWaBtn').href = `https://wa.me/6281932903670?text=${waMessage}`;
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                container.classList.remove('scale-95', 'opacity-0');
+                container.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('productModal');
+            const container = document.getElementById('modalContainer');
+
+            container.classList.remove('scale-100', 'opacity-100');
+            container.classList.add('scale-95', 'opacity-0');
+
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        window.onclick = function (event) {
+            const modal = document.getElementById('productModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+
+</html>
