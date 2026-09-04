@@ -74,10 +74,10 @@
 
             <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
-                <a href="index.html" class="hover:text-brand-600 transition-colors">Beranda</a>
-                <a href="#product" class="text-brand-600 transition-colors">Layanan & Produk</a>
-                <a href="gallery.html" class="hover:text-brand-600 transition-colors">Galeri</a>
-                <a href="index.html#contact" class="hover:text-brand-600 transition-colors">Contact</a>
+                <a href="index.html" class="hover:text-brand-600 transition-colors" data-translate="nav-home">Beranda</a>
+                <a href="#product" class="text-brand-600 transition-colors" data-translate="nav-service">Layanan & Produk</a>
+                <a href="gallery.html" class="hover:text-brand-600 transition-colors" data-translate="nav-gallery">Galeri</a>
+                <a href="index.html#contact" class="hover:text-brand-600 transition-colors" data-translate="nav-contact">Contact</a>
             </div>
 
             <!-- Right Actions (Desktop) -->
@@ -102,13 +102,13 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Panel (Baru) -->
+        <!-- Mobile Menu Panel -->
         <div id="mobile-menu"
             class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl transition-all duration-300">
             <div class="px-6 py-4 flex flex-col space-y-4 text-sm font-semibold text-slate-700">
-                <a href="index.html" class="hover:text-brand-600" data-translate="nav-service">Beranda</a>
+                <a href="index.html" class="hover:text-brand-600" data-translate="nav-home">Beranda</a>
                 <a href="product.html" class="hover:text-brand-600" data-translate="nav-service">Layanan & Produk</a>
-                <a href="gallery.html" class="hover:text-brand-600">Galeri</a>
+                <a href="gallery.html" class="hover:text-brand-600" data-translate="nav-gallery">Galeri</a>
                 <a href="index.html#contact" class="hover:text-brand-600" data-translate="nav-contact">Contact</a>
             </div>
         </div>
@@ -122,16 +122,16 @@
 
         <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xs font-bold uppercase tracking-wider mb-6"
-                data-aos="fade-down">
+                data-aos="fade-down" data-translate="prod-badge">
                 Katalog Produk Kami
             </div>
             <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6" data-aos="fade-up"
-                data-aos-delay="100">
+                data-aos-delay="100" data-translate="prod-title">
                 Solusi <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400">Inspeksi
                     Mutu</span> Industri
             </h1>
-            <p class="text-slate-600 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                Jelajahi berbagai sistem inspeksi mesin dan Sistem Maget Neodynium mutakhir yang dirancang
+            <p class="text-slate-600 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200" data-translate="prod-subtitle">
+                Jelajahi berbagai sistem inspeksi mesin dan Sistem Magnet Neodymium mutakhir yang dirancang
                 khusus
                 untuk memastikan keamanan pangan lini produksi Anda sesuai standar internasional.
             </p>
@@ -141,25 +141,6 @@
     <!-- Product Grid Section -->
     <section id="produk" class="py-10 bg-surface">
         <div class="max-w-7xl mx-auto px-6">
-
-            <!-- Filter/Kategori -->
-            <!-- <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
-                <a href="#" class="px-5 py-2 rounded-full bg-brand-600 text-white font-semibold text-sm shadow-md">Semua
-                    Produk</a>
-                <a href="/detailProdukMetal.html"
-                    class="px-5 py-2 rounded-full bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 font-semibold text-sm transition-all">Metal
-                    Detector</a>
-                <a href="/detailProdukXray.html"
-                    class="px-5 py-2 rounded-full bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 font-semibold text-sm transition-all">X-Ray
-                    Scanner</a>
-                <a href="/detailProdukMagnet.html"
-                    class="px-5 py-2 rounded-full bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 font-semibold text-sm transition-all">Sistem
-                    Magnetik</a>
-                <a href="/detailProdukGauss.html"
-                    class="px-5 py-2 rounded-full bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 font-semibold text-sm transition-all">Gauss
-                    Meter</a>
-            </div> -->
-
             <!-- Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
@@ -169,23 +150,19 @@
                     <div class="relative h-60 bg-white p-6 flex items-center justify-center overflow-hidden">
                         <img src="./assets/02032ec0.webp" alt="INTUITY Metal Detector"
                             class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
-                        <!-- <div
-                            class="absolute top-4 left-4 bg-white/90 backdrop-blur text-brand-600 text-xs font-bold px-3 py-1 rounded-full border border-slate-200">
-                            Metal Detector
-                        </div> -->
                     </div>
                     <div class="p-6 flex-1 flex flex-col">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors" data-translate="card1-title">
                             Metal Detector Conveyor &amp; Gravity-Fall</h3>
-                        <p class="text-sm text-slate-600 mb-6 flex-1">Sistem inspeksi logam presisi tinggi dengan
+                        <p class="text-sm text-slate-600 mb-6 flex-1" data-translate="card1-desc">Sistem inspeksi logam presisi tinggi dengan
                             teknologi sensitivitas tinggi dengan performa stabil untuk produk dalam kemasan atau curah
                             pada belt conveyor.
                         </p>
                         <div class="flex items-center justify-between pt-4 border-t border-slate-100">
-                            <span class="text-xs font-semibold text-slate-500"><i class="fa-solid fa-industry mr-1"></i>
+                            <span class="text-xs font-semibold text-slate-500" data-translate="card1-tag"><i class="fa-solid fa-industry mr-1"></i>
                                 Industri Makanan</span>
-                            <a href="/detailProdukMetal.html"
-                                class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-1 group-hover:gap-2 transition-all">
+                            <a href="detailProdukMetal.html"
+                                class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-1 group-hover:gap-2 transition-all" data-translate="btn-detail">
                                 Detail <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
@@ -198,21 +175,17 @@
                     <div class="relative h-60 bg-60 bg-white p-6 flex items-center justify-center overflow-hidden">
                         <img src="./assets/151.png" alt="RAPID 5000"
                             class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
-                        <!-- <div
-                            class="absolute top-4 left-4 bg-white/90 backdrop-blur text-brand-600 text-xs font-bold px-3 py-1 rounded-full border border-slate-200">
-                            Free Fall System
-                        </div> -->
                     </div>
                     <div class="p-6 flex-1 flex flex-col">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors" data-translate="card2-title">
                             X-Ray</h3>
-                        <p class="text-sm text-slate-600 mb-6 flex-1">Sistem inspeksi sinar-X (X-Ray) terdepan untuk
+                        <p class="text-sm text-slate-600 mb-6 flex-1" data-translate="card2-desc">Sistem inspeksi sinar-X (X-Ray) terdepan untuk
                             mendeteksi kontaminan logam, kaca, batu, keramik, dan plastik padat pada produk jadi.</p>
                         <div class="flex items-center justify-between pt-4 border-t border-slate-100">
-                            <span class="text-xs font-semibold text-slate-500"><i class="fa-solid fa-recycle mr-1"></i>
+                            <span class="text-xs font-semibold text-slate-500" data-translate="card2-tag"><i class="fa-solid fa-recycle mr-1"></i>
                                 Plastik & Daur Ulang</span>
-                            <a href="/detailProdukXray.html"
-                                class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-1 group-hover:gap-2 transition-all">
+                            <a href="detailProdukXray.html"
+                                class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-1 group-hover:gap-2 transition-all" data-translate="btn-detail">
                                 Detail <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
@@ -225,22 +198,18 @@
                     <div class="relative h-60 bg-white p-6 flex items-center justify-center overflow-hidden">
                         <img src="./assets/Gemini_Generated_Image_l5qeidl5qeidl5qe.jpg" alt="RAYCON X-Ray"
                             class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
-                        <!-- <div
-                            class="absolute top-4 left-4 bg-white/90 backdrop-blur text-brand-600 text-xs font-bold px-3 py-1 rounded-full border border-slate-200">
-                            X-Ray Scanner
-                        </div> -->
                     </div>
 
                     <div class="p-6 flex-1 flex flex-col">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors">
-                            ⁠Magnet Neodynium</h3>
-                        <p class="text-sm text-slate-600 mb-6 flex-1">Magnet Neodynium berkualitas tinggi dan paduan
-                            tanah NdFeB dan dibuat metode produksi khusus</p>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors" data-translate="card3-title">
+                            Magnet Neodymium</h3>
+                        <p class="text-sm text-slate-600 mb-6 flex-1" data-translate="card3-desc">Magnet Neodymium berkualitas tinggi dan paduan
+                            tanah jarang NdFeB yang dibuat dengan metode produksi khusus.</p>
                         <div class="flex items-center justify-between pt-4 border-t border-slate-100">
-                            <span class="text-xs font-semibold text-slate-500"><i class="fa-solid fa-box-open mr-1"></i>
+                            <span class="text-xs font-semibold text-slate-500" data-translate="card3-tag"><i class="fa-solid fa-box-open mr-1"></i>
                                 FMCG & Farmasi</span>
-                            <a href="/detailProdukMagnet.html"
-                                class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-1 group-hover:gap-2 transition-all">
+                            <a href="detailProdukMagnet.html"
+                                class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-1 group-hover:gap-2 transition-all" data-translate="btn-detail">
                                 Detail <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
@@ -251,23 +220,19 @@
                 <div class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 group overflow-hidden flex flex-col"
                     data-aos="fade-up" data-aos-delay="300">
                     <div class="relative h-60 bg-white p-6 flex items-center justify-center overflow-hidden">
-                        <img src="./assets/gaussMeter/download.jpeg" alt="RAYCON X-Ray"
+                        <img src="./assets/gaussMeter/download.jpeg" alt="Gauss Meter"
                             class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
-                        <!-- <div
-                            class="absolute top-4 left-4 bg-white/90 backdrop-blur text-brand-600 text-xs font-bold px-3 py-1 rounded-full border border-slate-200">
-                            X-Ray Scanner
-                        </div> -->
                     </div>
 
                     <div class="p-6 flex-1 flex flex-col">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors" data-translate="card4-title">
                             Gauss Meter</h3>
-                        <p class="text-sm text-slate-600 mb-6 flex-1">Deskripsi</p>
+                        <p class="text-sm text-slate-600 mb-6 flex-1" data-translate="card4-desc">Alat ukur presisi tinggi untuk menguji kekuatan medan magnet pada sistem pemisah magnetik industri.</p>
                         <div class="flex items-center justify-between pt-4 border-t border-slate-100">
-                            <span class="text-xs font-semibold text-slate-500"><i class="fa-solid fa-box-open mr-1"></i>
+                            <span class="text-xs font-semibold text-slate-500" data-translate="card4-tag"><i class="fa-solid fa-box-open mr-1"></i>
                                 FMCG & Farmasi</span>
-                            <a href="/detailProdukGauss.html"
-                                class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-1 group-hover:gap-2 transition-all">
+                            <a href="detailProdukGauss.html"
+                                class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-1 group-hover:gap-2 transition-all" data-translate="btn-detail">
                                 Detail <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
@@ -280,121 +245,87 @@
 
     <!-- CTA Section -->
     <section class="py-20 bg-brand-900 relative overflow-hidden">
-        <!-- Optional pattern background -->
         <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
         </div>
         <div class="max-w-4xl mx-auto px-6 relative z-10 text-center" data-aos="zoom-in">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Bingung Memilih Mesin yang Tepat?</h2>
-            <p class="text-brand-100 mb-8 max-w-2xl mx-auto">Konsultasikan spesifikasi lini produksi Anda. Tim engineer
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" data-translate="cta-title">Bingung Memilih Mesin yang Tepat?</h2>
+            <p class="text-brand-100 mb-8 max-w-2xl mx-auto" data-translate="cta-desc">Konsultasikan spesifikasi lini produksi Anda. Tim engineer
                 kami siap memberikan rekomendasi solusi inspeksi yang paling efisien dan mematuhi regulasi industri
                 Anda.</p>
-            <a href="https://wa.me/6281234567890" target="_blank"
-                class="inline-flex items-center gap-2 bg-white text-brand-900 font-bold px-8 py-4 rounded-xl hover:bg-brand-50 hover:scale-105 transition-all shadow-lg">
+            <a href="https://wa.me/6281932903670" target="_blank"
+                class="inline-flex items-center gap-2 bg-white text-brand-900 font-bold px-8 py-4 rounded-xl hover:bg-brand-50 hover:scale-105 transition-all shadow-lg" data-translate="cta-btn">
                 <i class="fa-brands fa-whatsapp text-xl text-green-500"></i> Konsultasi Gratis via WhatsApp
             </a>
         </div>
     </section>
 
-    <!-- === BAGIAN FOOTER (BARU) === -->
+    <!-- Footer -->
     <footer class="bg-slate-50 border-t border-slate-200 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-6">
-
-            <!-- Grid Layout (1 Kolom di HP, 3 Kolom di Desktop) -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-12">
-
-                <!-- Kolom 1: Info Brand -->
                 <div>
-                    <!-- Logo (Menggunakan logo yang sama dengan Navbar) -->
-                    <a href="#home" class="flex items-center gap-2 mb-4">
-                        <div
-                            class="w-8 h-8 bg-brand-600 rounded flex items-center justify-center text-white font-bold text-sm">
-                            T</div>
-                        <span class="font-bold text-xl tracking-tight text-slate-900">Log<span
-                                class="text-brand-600">Go</span></span>
+                    <a href="index.html" class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-brand-600 rounded flex items-center justify-center text-white font-bold text-sm">T</div>
+                        <span class="font-bold text-xl tracking-tight text-slate-900">Log<span class="text-brand-600">Go</span></span>
                     </a>
                     <p class="text-sm text-slate-600 leading-relaxed pr-0 md:pr-4" data-translate="footer-desc">
-                        PT Inovasi Cakrawala Solusi berkomitmen menyediakan peralatan dan jasa inspeksi mutu untuk
-                        menunjang keamanan pangan yang memenuhi standar industri tinggi.
+                        PT Inovasi Cakrawala Solusi berkomitmen menyediakan peralatan dan jasa inspeksi mutu untuk menunjang keamanan pangan yang memenuhi standar industri tinggi.
                     </p>
                 </div>
-
-                <!-- Kolom 2: Quick Links -->
                 <div>
-                    <h3 class="font-bold text-slate-900 mb-5 uppercase text-sm tracking-wider"
-                        data-translate="footer-link-title">
+                    <h3 class="font-bold text-slate-900 mb-5 uppercase text-sm tracking-wider" data-translate="footer-link-title">
                         Quick Links
                     </h3>
                     <ul class="space-y-3 text-sm text-slate-600 font-medium">
-                        <li><a href="#home" class="hover:text-brand-600 transition-colors flex items-center gap-2"><i
-                                    class="fa-solid fa-angle-right text-xs"></i> Beranda</a></li>
-                        <li><a href="#about" class="hover:text-brand-600 transition-colors flex items-center gap-2"><i
-                                    class="fa-solid fa-angle-right text-xs"></i> Tentang Kami</a></li>
-                        <li><a href="product.html"
-                                class="hover:text-brand-600 transition-colors flex items-center gap-2"
-                                data-translate="nav-service"><i class="fa-solid fa-angle-right text-xs"></i> Layanan &
-                                Produk</a></li>
-                        <li><a href="gallery.html"
-                                class="hover:text-brand-600 transition-colors flex items-center gap-2"
-                                data-translate="nav-gallery"><i class="fa-solid fa-angle-right text-xs"></i> Galeri</a>
-                        </li>
+                        <li><a href="index.html" class="hover:text-brand-600 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> <span data-translate="nav-home">Beranda</span></a></li>
+                        <li><a href="index.html#about" class="hover:text-brand-600 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> <span data-translate="about-us">Tentang Kami</span></a></li>
+                        <li><a href="product.html" class="hover:text-brand-600 transition-colors flex items-center gap-2" data-translate="nav-service"><i class="fa-solid fa-angle-right text-xs"></i> Layanan & Produk</a></li>
+                        <li><a href="gallery.html" class="hover:text-brand-600 transition-colors flex items-center gap-2" data-translate="nav-gallery"><i class="fa-solid fa-angle-right text-xs"></i> Galeri</a></li>
                     </ul>
                 </div>
-
-                <!-- Kolom 3: Contact Info -->
                 <div>
-                    <h3 class="font-bold text-slate-900 mb-5 uppercase text-sm tracking-wider"
-                        data-translate="footer-contact-title">
+                    <h3 class="font-bold text-slate-900 mb-5 uppercase text-sm tracking-wider" data-translate="footer-contact-title">
                         Contact Us
                     </h3>
                     <ul class="space-y-4 text-sm text-slate-600 font-medium">
-                        <!-- Info Alamat -->
                         <li class="flex items-start gap-3">
                             <i class="fa-solid fa-location-dot mt-1 text-brand-600 w-4 text-center"></i>
                             <span>Perum. The Taman Dhika A6-16,<br>Buduran, Sidoarjo 61252</span>
                         </li>
-                        <!-- Info Telepon -->
                         <li class="flex items-center gap-3">
                             <i class="fa-solid fa-phone text-brand-600 w-4 text-center"></i>
                             <span>+62 819 3290 3670</span>
                         </li>
-                        <!-- Info Email -->
                         <li class="flex items-center gap-3">
                             <i class="fa-solid fa-envelope text-brand-600 w-4 text-center"></i>
                             <span>inovasicakrawalasolusi@gmail.com</span>
                         </li>
                     </ul>
                 </div>
-
             </div>
-
-            <!-- Bottom Copyright Bar -->
-            <div
-                class="pt-8 border-t border-slate-200 text-center text-sm text-slate-500 font-medium flex flex-col md:flex-row justify-between items-center gap-4">
-                <p data-translate="footer-txt">&copy; 2026 PT Inovasi Cakrawala Solusi. Quality Inspection Solutions.
-                </p>
-
-                <!-- Social Media Icons Opsional -->
+            <div class="pt-8 border-t border-slate-200 text-center text-sm text-slate-500 font-medium flex flex-col md:flex-row justify-between items-center gap-4">
+                <p data-translate="footer-txt">&copy; 2026 PT Inovasi Cakrawala Solusi. Quality Inspection Solutions.</p>
                 <div class="flex space-x-4 text-lg text-slate-400">
                     <a href="#" class="hover:text-brand-600 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" class="hover:text-brand-600 transition-colors"><i
-                            class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-brand-600 transition-colors"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#" class="hover:text-brand-600 transition-colors"><i class="fa-brands fa-facebook"></i></a>
                 </div>
             </div>
-
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281932903670" target="_blank"
+        class="fixed bottom-6 right-6 z-[99] bg-[#25D366] text-white rounded-2xl w-14 h-14 flex items-center justify-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize AOS
-        AOS.init({
-            once: true,
-            offset: 50,
-        });
+        AOS.init({ once: true, offset: 50, duration: 800, easing: 'ease-out-cubic' });
 
-        // Add small dropshadow to navbar on scroll
+        // Navbar Scroll Logic
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
             if (window.scrollY > 10) {
@@ -411,6 +342,106 @@
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // === FITUR PENGGANTI BAHASA (MULTI-LANGUAGE) ===
+        const translations = {
+            id: {
+                "nav-home": "Beranda",
+                "nav-service": "Layanan & Produk",
+                "nav-gallery": "Galeri",
+                "nav-contact": "Contact",
+                "prod-badge": "Katalog Produk Kami",
+                "prod-title": "Solusi <span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400\">Inspeksi Mutu</span> Industri",
+                "prod-subtitle": "Jelajahi berbagai sistem inspeksi mesin dan Sistem Magnet Neodymium mutakhir yang dirancang khusus untuk memastikan keamanan pangan lini produksi Anda sesuai standar internasional.",
+                "card1-title": "Metal Detector Conveyor &amp; Gravity-Fall",
+                "card1-desc": "Sistem inspeksi logam presisi tinggi dengan teknologi sensitivitas tinggi dengan performa stabil untuk produk dalam kemasan atau curah pada belt conveyor.",
+                "card1-tag": "Industri Makanan",
+                "card2-title": "X-Ray",
+                "card2-desc": "Sistem inspeksi sinar-X (X-Ray) terdepan untuk mendeteksi kontaminan logam, kaca, batu, keramik, dan plastik padat pada produk jadi.",
+                "card2-tag": "Plastik & Daur Ulang",
+                "card3-title": "Magnet Neodymium",
+                "card3-desc": "Magnet Neodymium berkualitas tinggi dan paduan tanah jarang NdFeB yang dibuat dengan metode produksi khusus.",
+                "card3-tag": "FMCG & Farmasi",
+                "card4-title": "Gauss Meter",
+                "card4-desc": "Alat ukur presisi tinggi untuk menguji kekuatan medan magnet pada sistem pemisah magnetik industri.",
+                "card4-tag": "FMCG & Farmasi",
+                "btn-detail": "Detail <i class=\"fa-solid fa-arrow-right\"></i>",
+                "cta-title": "Bingung Memilih Mesin yang Tepat?",
+                "cta-desc": "Konsultasikan spesifikasi lini produksi Anda. Tim engineer kami siap memberikan rekomendasi solusi inspeksi yang paling efisien dan mematuhi regulasi industri Anda.",
+                "cta-btn": "<i class=\"fa-brands fa-whatsapp text-xl text-green-500\"></i> Konsultasi Gratis via WhatsApp",
+                "footer-desc": "PT Inovasi Cakrawala Solusi berkomitmen menyediakan peralatan dan jasa inspeksi mutu untuk menunjang keamanan pangan yang memenuhi standar industri tinggi.",
+                "footer-link-title": "Quick Links",
+                "footer-contact-title": "Contact Us",
+                "about-us": "Tentang Kami",
+                "footer-txt": "&copy; 2026 PT Inovasi Cakrawala Solusi. Quality Inspection Solutions."
+            },
+            en: {
+                "nav-home": "Home",
+                "nav-service": "Services & Products",
+                "nav-gallery": "Gallery",
+                "nav-contact": "Contact",
+                "prod-badge": "Our Product Catalog",
+                "prod-title": "Industrial <span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400\">Quality Inspection</span> Solutions",
+                "prod-subtitle": "Explore various advanced machine inspection systems and Neodymium Magnet Systems specifically designed to ensure food safety in your production line according to international standards.",
+                "card1-title": "Metal Detector Conveyor &amp; Gravity-Fall",
+                "card1-desc": "High-precision metal inspection system with high sensitivity technology and stable performance for packaged or bulk products on a belt conveyor.",
+                "card1-tag": "Food Industry",
+                "card2-title": "X-Ray",
+                "card2-desc": "Leading X-ray inspection systems to detect metal, glass, stone, ceramic, and hard plastic contaminants in finished products.",
+                "card2-tag": "Plastic & Recycling",
+                "card3-title": "Neodymium Magnet",
+                "card3-desc": "High-quality Neodymium magnets and NdFeB rare earth alloys manufactured with specialized production methods.",
+                "card3-tag": "FMCG & Pharma",
+                "card4-title": "Gauss Meter",
+                "card4-desc": "High-precision measuring instrument to test magnetic field strength on industrial magnetic separator systems.",
+                "card4-tag": "FMCG & Pharma",
+                "btn-detail": "Detail <i class=\"fa-solid fa-arrow-right\"></i>",
+                "cta-title": "Confused About Choosing the Right Machine?",
+                "cta-desc": "Consult your production line specifications. Our engineering team is ready to provide the most efficient inspection solution recommendations compliant with your industry regulations.",
+                "cta-btn": "<i class=\"fa-brands fa-whatsapp text-xl text-green-500\"></i> Free Consultation via WhatsApp",
+                "footer-desc": "PT Inovasi Cakrawala Solusi is committed to providing quality inspection equipment and services to support food safety meeting high industrial standards.",
+                "footer-link-title": "Quick Links",
+                "footer-contact-title": "Contact Us",
+                "about-us": "About Us",
+                "footer-txt": "&copy; 2026 PT Inovasi Cakrawala Solusi. Quality Inspection Solutions."
+            }
+        };
+
+        let currentLang = 'id';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.querySelectorAll('[data-translate]').forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if (translations[lang][key]) el.innerHTML = translations[lang][key];
+            });
+
+            const activeClasses = ['text-brand-600', 'font-bold'];
+            ['desktop', 'mobile'].forEach(type => {
+                const btnID = document.getElementById(`btn-id-${type}`);
+                const btnEN = document.getElementById(`btn-en-${type}`);
+                if (lang === 'id') {
+                    btnID.classList.add(...activeClasses);
+                    btnEN.classList.remove(...activeClasses);
+                } else {
+                    btnEN.classList.add(...activeClasses);
+                    btnID.classList.remove(...activeClasses);
+                }
+            });
+        }
+
+        const toggleLang = () => setLanguage(currentLang === 'id' ? 'en' : 'id');
+        document.getElementById('langToggleDesktop').addEventListener('click', toggleLang);
+        document.getElementById('langToggleMobile').addEventListener('click', toggleLang);
+
+        setLanguage('id');
     </script>
 </body>
 

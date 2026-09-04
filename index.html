@@ -406,23 +406,23 @@
                     </div>
                 </div>
 
-                <!-- Simple Form -->
+                <!-- Form Kontak -->
                 <div class="lg:w-7/12" data-aos="fade-up">
-                    <!-- Padding form diturunkan jadi p-5 di mobile -->
-                    <form
+                    <form id="contact-form"
                         class="space-y-4 md:space-y-5 bg-white p-5 md:p-8 rounded-2xl border border-slate-200 shadow-sm">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
                             <div>
                                 <label class="block text-sm font-semibold text-slate-700 mb-1.5"
                                     data-translate="lbl-fname">Nama Depan</label>
-                                <input type="text" data-translate-ph="ph-fname"
+                                <!-- Atribut name="name" disesuaikan dengan template emailjs: {{name}} -->
+                                <input type="text" name="name" data-translate-ph="ph-fname"
                                     class="w-full px-4 py-3 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder-slate-400"
-                                    placeholder="Budi">
+                                    placeholder="Budi" required>
                             </div>
                             <div>
                                 <label class="block text-sm font-semibold text-slate-700 mb-1.5"
                                     data-translate="lbl-cname">Nama Perusahaan</label>
-                                <input type="text" data-translate-ph="ph-cname"
+                                <input type="text" name="company_name" data-translate-ph="ph-cname"
                                     class="w-full px-4 py-3 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder-slate-400"
                                     placeholder="PT Contoh Industri">
                             </div>
@@ -430,18 +430,20 @@
                         <div>
                             <label class="block text-sm font-semibold text-slate-700 mb-1.5"
                                 data-translate="lbl-email">Email Perusahaan</label>
-                            <input type="email" data-translate-ph="ph-email"
+                            <!-- Atribut name="email" disesuaikan dengan template emailjs: {{email}} -->
+                            <input type="email" name="email" data-translate-ph="ph-email"
                                 class="w-full px-4 py-3 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder-slate-400"
-                                placeholder="budi@perusahaan.com">
+                                placeholder="budi@perusahaan.com" required>
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-slate-700 mb-1.5"
                                 data-translate="lbl-msg">Pesan / Jenis Mesin yang Dicari</label>
-                            <textarea rows="3" data-translate-ph="ph-msg"
+                            <!-- Atribut name="message" disesuaikan dengan template emailjs: {{message}} -->
+                            <textarea name="message" rows="3" data-translate-ph="ph-msg"
                                 class="w-full px-4 py-3 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder-slate-400"
-                                placeholder="Kami mencari Metal Detector..."></textarea>
+                                placeholder="Kami mencari Metal Detector..." required></textarea>
                         </div>
-                        <button type="submit"
+                        <button type="submit" id="submit-btn"
                             class="w-full bg-brand-600 text-white font-bold py-3.5 px-4 rounded-lg hover:bg-brand-700 transition-all duration-300"
                             data-translate="btn-send">
                             Kirim Pesan Penawaran
@@ -704,6 +706,38 @@
         document.getElementById('langToggleMobile').addEventListener('click', toggleLang);
 
         setLanguage('id');
+    </script>
+
+    <!-- SDK EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        // Inisialisasi EmailJS dengan Public Key Anda
+        (function () {
+            emailjs.init("bRngH4RvpyBdBK-cK"); // Ganti dengan Public Key akun Anda
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const btn = document.getElementById('submit-btn');
+            btn.innerText = 'Mengirim...';
+
+            const serviceID = 'service_vqu179e';
+            const templateID = 'template_54lp4xh';
+
+            // Mengirim data dari form langsung ke EmailJS
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.innerText = 'Pesan Berhasil Terkirim!';
+                    alert('Pesan penawaran berhasil dikirim ke email Anda!');
+                    document.getElementById('contact-form').reset();
+                    setTimeout(() => { btn.innerText = 'Kirim Pesan Penawaran'; }, 3000);
+                }, (err) => {
+                    btn.innerText = 'Gagal Mengirim';
+                    alert('Terjadi kesalahan: ' + JSON.stringify(err));
+                    setTimeout(() => { btn.innerText = 'Kirim Pesan Penawaran'; }, 3000);
+                });
+        });
     </script>
 </body>
 
