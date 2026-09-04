@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,27 +10,38 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body class="bg-slate-50 min-h-screen p-8">
 
     <div class="max-w-6xl mx-auto">
         <!-- Header & Tombol Kembali -->
-        <div class="mb-8 hidden md:block flex items-center justify-between">
+        <div class="mb-8 hidden md:block md:flex items-center justify-between">
             <div>
-                <h1 class="text-3xl font-bold text-slate-900 mb-2">Katalog Produk Magnet Neodymium</h1>
-                <p class="text-slate-600">Tampilan detail produk dari berbagai sudut. Klik pada produk untuk melihat detail[cite: 5].</p>
+                <h1 class="text-3xl font-bold text-slate-900 mb-2">Katalog Produk Magnet Neodynium</h1>
+                <p class="text-slate-600">Tampilan detail produk dari berbagai sudut. Klik pada produk untuk melihat
+                    detail[cite: 5].</p>
             </div>
-            <a href="product.html" class="bg-white border border-slate-200 px-4 py-2 rounded-lg shadow-sm hover:bg-slate-50 transition-colors text-slate-700 font-medium flex items-center gap-2">
-                <i class="fa-solid fa-arrow-left"></i> Kembali
-            </a>
+            <div class="flex gap-3">
+                <a href="product.html"
+                    class="bg-white border border-slate-200 px-4 py-2 rounded-lg shadow-sm hover:bg-slate-50 transition-colors text-slate-700 font-medium flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali
+                </a>
+                <a href="/detailProdukGauss.html"
+                    class="bg-white border border-slate-200 px-4 py-2 rounded-lg shadow-sm hover:bg-slate-50 transition-colors text-slate-700 font-medium flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
         </div>
-        
+
         <div class="mb-8 block md:hidden flex flex-col items-center justify-between gap-4">
-            <a href="product.html" class="bg-white border border-slate-200 px-4 py-2 rounded-lg shadow-sm hover:bg-slate-50 transition-colors text-slate-700 font-medium flex items-center gap-2">
+            <a href="product.html"
+                class="bg-white border border-slate-200 px-4 py-2 rounded-lg shadow-sm hover:bg-slate-50 transition-colors text-slate-700 font-medium flex items-center gap-2">
                 <i class="fa-solid fa-arrow-left"></i> Kembali
             </a>
             <div>
                 <h1 class="text-3xl text-center font-bold text-slate-900 mb-2">Katalog Produk Magnet Neodymium</h1>
-                <p class="text-slate-600 text-center">Tampilan detail produk dari berbagai sudut. Klik pada produk untuk melihat detail[cite: 5].</p>
+                <p class="text-slate-600 text-center">Tampilan detail produk dari berbagai sudut. Klik pada produk untuk
+                    melihat detail[cite: 5].</p>
             </div>
         </div>
 
@@ -40,7 +52,8 @@
             <div onclick="openModal('Neodymium Tube Magnet 25mm', './assets/magnet/25mm_Tube_200_800x.webp', 'Magnetic tube berukuran 25mm dirancang untuk menyaring kontaminan besi halus dari material bubuk atau cairan di lini produksi.', 'Spesifikasi: Kekuatan gauss tinggi, material food grade stainless steel, mudah dibersihkan.')"
                 class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer">
                 <div class="h-64 overflow-hidden bg-slate-100">
-                    <img src="./assets/magnet/25mm_Tube_200_800x.webp" alt="Tampak Depan" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <img src="./assets/magnet/25mm_Tube_200_800x.webp" alt="Tampak Depan"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                 </div>
                 <div class="p-4 border-t border-slate-100">
                     <h3 class="font-bold text-slate-800">Neodymium Tube Magnet 25mm</h3>
@@ -52,7 +65,8 @@
             <div onclick="openModal('Easy Cleaning Magnetic Bar', './assets/magnet/easy cleaning.png', 'Sistem magnetik dengan fitur pembersihan mudah (easy clean) untuk menghemat waktu perawatan mesin pabrik.', 'Spesifikasi: Desain ergonomis, efisiensi tinggi, perawatan cepat tanpa alat khusus.')"
                 class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer">
                 <div class="h-64 overflow-hidden bg-slate-100">
-                    <img src="./assets/magnet/easy cleaning.png" alt="Tampak Samping" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <img src="./assets/magnet/easy cleaning.png" alt="Tampak Samping"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                 </div>
                 <div class="p-4 border-t border-slate-100">
                     <h3 class="font-bold text-slate-800">Easy Cleaning Magnetic Bar</h3>
@@ -64,7 +78,9 @@
             <div onclick="openModal('Mirror Finish 12000 Gauss Tube', './assets/magnet/gme-magnetic-tube-12000-gauss-mirror-finish21301848548.webp', 'Magnetic tube berstandar tinggi dengan hasil akhir permukaan cermin (mirror finish) berkapasitas hingga 12000 Gauss.', 'Spesifikasi: Kekuatan 12000 Gauss, permukaan higienis anti-bakteri.')"
                 class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer">
                 <div class="h-64 overflow-hidden bg-slate-100">
-                    <img src="./assets/magnet/gme-magnetic-tube-12000-gauss-mirror-finish21301848548.webp" alt="Tampak Belakang" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <img src="./assets/magnet/gme-magnetic-tube-12000-gauss-mirror-finish21301848548.webp"
+                        alt="Tampak Belakang"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                 </div>
                 <div class="p-4 border-t border-slate-100">
                     <h3 class="font-bold text-slate-800">Mirror Finish 12000 Gauss Tube</h3>
@@ -76,7 +92,8 @@
             <div onclick="openModal('Grate Magnet with Diverter', './assets/magnet/grate with diverter.png', 'Grate magnet dilengkapi pengarah aliran (diverter) untuk memecah tumpukan material agar penangkapan logam lebih optimal.', 'Spesifikasi: Dilengkapi sudut pengarah material, distribusi aliran merata.')"
                 class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer">
                 <div class="h-64 overflow-hidden bg-slate-100">
-                    <img src="./assets/magnet/grate with diverter.png" alt="Detail Sensor" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <img src="./assets/magnet/grate with diverter.png" alt="Detail Sensor"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                 </div>
                 <div class="p-4 border-t border-slate-100">
                     <h3 class="font-bold text-slate-800">Grate Magnet with Diverter</h3>
@@ -88,19 +105,23 @@
             <div onclick="openModal('Standard Grate Magnet', './assets/magnet/grate-magnetf1261bf8-45e0-4a07-a75b-7bf0b653638f.webp', 'Filter magnetik tipe grid yang dipasang di dalam hopper atau saluran masuk mesin produksi.', 'Spesifikasi: Konstruksi kokoh, custom ukuran sesuai kebutuhan hopper pabrik.')"
                 class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer">
                 <div class="h-64 overflow-hidden bg-slate-100">
-                    <img src="./assets/magnet/grate-magnetf1261bf8-45e0-4a07-a75b-7bf0b653638f.webp" alt="Implementasi Pabrik" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <img src="./assets/magnet/grate-magnetf1261bf8-45e0-4a07-a75b-7bf0b653638f.webp"
+                        alt="Implementasi Pabrik"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                 </div>
                 <div class="p-4 border-t border-slate-100">
                     <h3 class="font-bold text-slate-800">Standard Grate Magnet</h3>
                     <p class="text-sm text-slate-500">Perlindungan mesin dari partikel besi</p>
                 </div>
             </div>
-            
+
             <!-- Card Gambar 6 -->
             <div onclick="openModal('Hopper Magnetic Filter', './assets/magnet/hopper-magnet-food-industry-magnetic-filterd6de0.webp', 'Solusi filter magnetik khusus industri makanan untuk menyaring serpihan logam sekecil apa pun dari bahan baku.', 'Spesifikasi: Memenuhi standar HACCP & BRC, food-grade certified.')"
                 class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer">
                 <div class="h-64 overflow-hidden bg-slate-100">
-                    <img src="./assets/magnet/hopper-magnet-food-industry-magnetic-filterd6de0.webp" alt="Implementasi Pabrik" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <img src="./assets/magnet/hopper-magnet-food-industry-magnetic-filterd6de0.webp"
+                        alt="Implementasi Pabrik"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                 </div>
                 <div class="p-4 border-t border-slate-100">
                     <h3 class="font-bold text-slate-800">Hopper Magnetic Filter</h3>
@@ -112,7 +133,9 @@
             <div onclick="openModal('Permanent Bullet Magnet', './assets/magnet/magnetic-separator-permanent-bullet-magnets07598193966.webp', 'Bullet magnet permanen yang dipasang pada pipa pneumatik untuk menangkap kontaminan logam dalam aliran udara.', 'Spesifikasi: Desain aerodinamis, tidak menghambat laju aliran pneumatik.')"
                 class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer">
                 <div class="h-64 overflow-hidden bg-slate-100">
-                    <img src="./assets/magnet/magnetic-separator-permanent-bullet-magnets07598193966.webp" alt="Implementasi Pabrik" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <img src="./assets/magnet/magnetic-separator-permanent-bullet-magnets07598193966.webp"
+                        alt="Implementasi Pabrik"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                 </div>
                 <div class="p-4 border-t border-slate-100">
                     <h3 class="font-bold text-slate-800">Permanent Bullet Magnet</h3>
@@ -124,7 +147,9 @@
             <div onclick="openModal('Bullet Magnet (Open Transparent)', './assets/magnet/SPP_permanent_bullet_magnet_without_reducers_open_transp_1200x900_10191_large.png', 'Bullet magnet tanpa peredam untuk jalur pipa berkecepatan tinggi dengan efisiensi pemisahan optimal.', 'Spesifikasi: Struktur aliran lancar, daya magnet tahan lama.')"
                 class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer">
                 <div class="h-64 overflow-hidden bg-slate-100">
-                    <img src="./assets/magnet/SPP_permanent_bullet_magnet_without_reducers_open_transp_1200x900_10191_large.png" alt="Implementasi Pabrik" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <img src="./assets/magnet/SPP_permanent_bullet_magnet_without_reducers_open_transp_1200x900_10191_large.png"
+                        alt="Implementasi Pabrik"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                 </div>
                 <div class="p-4 border-t border-slate-100">
                     <h3 class="font-bold text-slate-800">Bullet Magnet (Without Reducers)</h3>
@@ -136,7 +161,8 @@
             <div onclick="openModal('Industrial Magnetic System Unit', './assets/magnet/THUMBNAIL.png', 'Sistem instalasi magnet neodymium terpadu untuk lini produksi skala besar di pabrik modern.', 'Spesifikasi: Kustomisasi penuh sesuai layout pabrik, garansi performa.')"
                 class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer">
                 <div class="h-64 overflow-hidden bg-slate-100">
-                    <img src="./assets/magnet/THUMBNAIL.png" alt="Implementasi Pabrik" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <img src="./assets/magnet/THUMBNAIL.png" alt="Implementasi Pabrik"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                 </div>
                 <div class="p-4 border-t border-slate-100">
                     <h3 class="font-bold text-slate-800">Industrial Magnetic System Unit</h3>
@@ -148,13 +174,16 @@
     </div>
 
     <!-- === MODAL POPUP DETAIL PRODUK (BISA DI-SCROLL & PROPOSIONAL) === -->
-    <div id="productModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl max-w-[95%] w-full max-h-[90vh] flex flex-col overflow-hidden shadow-2xl transform transition-all scale-95 opacity-0 duration-300" id="modalContainer">
-            
+    <div id="productModal"
+        class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-[95%] w-full max-h-[90vh] flex flex-col overflow-hidden shadow-2xl transform transition-all scale-95 opacity-0 duration-300"
+            id="modalContainer">
+
             <!-- Modal Header -->
             <div class="flex justify-between items-center px-6 py-4 border-b border-slate-100 flex-shrink-0">
                 <h3 id="modalTitle" class="text-xl font-bold text-slate-900">Judul Produk</h3>
-                <button onclick="closeModal()" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors">
+                <button onclick="closeModal()"
+                    class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors">
                     <i class="fa-solid fa-xmark text-lg"></i>
                 </button>
             </div>
@@ -162,13 +191,15 @@
             <!-- Modal Body (Bisa di-scroll) -->
             <div class="p-6 overflow-y-auto flex-grow">
                 <!-- Gambar Produk (Proporsional & Diperkecil dengan object-contain) -->
-                <div class="mb-6 rounded-2xl overflow-hidden bg-slate-100 h-48 border border-slate-100 flex items-center justify-center p-2">
+                <div
+                    class="mb-6 rounded-2xl overflow-hidden bg-slate-100 h-48 border border-slate-100 flex items-center justify-center p-2">
                     <img id="modalImage" src="" alt="Detail Produk" class="max-w-full max-h-full object-contain">
                 </div>
-                
+
                 <h4 class="font-semibold text-slate-800 mb-2">Deskripsi Produk</h4>
-                <p id="modalDesc" class="text-slate-600 text-sm leading-relaxed mb-4">Deskripsi lengkap produk akan muncul di sini.</p>
-                
+                <p id="modalDesc" class="text-slate-600 text-sm leading-relaxed mb-4">Deskripsi lengkap produk akan
+                    muncul di sini.</p>
+
                 <div class="bg-blue-50 border border-blue-100 rounded-xl p-4 mb-2">
                     <h5 class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">Spesifikasi & Catatan</h5>
                     <p id="modalSpecs" class="text-xs text-slate-600">Spesifikasi rinci produk.</p>
@@ -176,11 +207,14 @@
             </div>
 
             <!-- Modal Footer / Aksi -->
-            <div class="px-6 py-4 border-t border-slate-100 bg-slate-50 flex items-center justify-end gap-3 flex-shrink-0">
-                <button onclick="closeModal()" class="px-5 py-2.5 rounded-xl border border-slate-200 text-slate-700 font-semibold hover:bg-slate-100 transition-colors text-sm">
+            <div
+                class="px-6 py-4 border-t border-slate-100 bg-slate-50 flex items-center justify-end gap-3 flex-shrink-0">
+                <button onclick="closeModal()"
+                    class="px-5 py-2.5 rounded-xl border border-slate-200 text-slate-700 font-semibold hover:bg-slate-100 transition-colors text-sm">
                     Tutup
                 </button>
-                <a id="modalWaBtn" href="#" target="_blank" class="px-5 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-semibold transition-colors text-sm flex items-center gap-2 shadow-sm">
+                <a id="modalWaBtn" href="#" target="_blank"
+                    class="px-5 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-semibold transition-colors text-sm flex items-center gap-2 shadow-sm">
                     <i class="fa-brands fa-whatsapp text-lg"></i> Tanya Penawaran
                 </a>
             </div>
@@ -193,12 +227,12 @@
         function openModal(title, imageSrc, desc, specs) {
             const modal = document.getElementById('productModal');
             const container = document.getElementById('modalContainer');
-            
+
             document.getElementById('modalTitle').innerText = title;
             document.getElementById('modalImage').src = imageSrc;
             document.getElementById('modalDesc').innerText = desc;
             document.getElementById('modalSpecs').innerText = specs;
-            
+
             const waMessage = encodeURIComponent(`Halo, saya tertarik untuk mengetahui lebih lanjut mengenai produk: *${title}*`);
             document.getElementById('modalWaBtn').href = `https://wa.me/6281932903670?text=${waMessage}`;
 
@@ -212,16 +246,16 @@
         function closeModal() {
             const modal = document.getElementById('productModal');
             const container = document.getElementById('modalContainer');
-            
+
             container.classList.remove('scale-100', 'opacity-100');
             container.classList.add('scale-95', 'opacity-0');
-            
+
             setTimeout(() => {
                 modal.classList.add('hidden');
             }, 300);
         }
 
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             const modal = document.getElementById('productModal');
             if (event.target === modal) {
                 closeModal();
@@ -229,4 +263,5 @@
         }
     </script>
 </body>
+
 </html>
