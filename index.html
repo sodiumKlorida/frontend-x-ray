@@ -424,44 +424,110 @@
                 <div class="lg:w-7/12" data-aos="fade-up">
                     <form id="contact-form"
                         class="space-y-4 md:space-y-5 bg-white p-5 md:p-8 rounded-2xl border border-slate-200 shadow-sm">
+
+                        <!-- Sapaan & Nama -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-5">
+                            <div class="sm:col-span-1">
+                                <label class="block text-sm font-semibold text-slate-700 mb-1.5"
+                                    data-translate="lbl-title">Sapaan</label>
+                                <select name="title"
+                                    class="w-full px-4 py-3 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                                    <option value="Bapak">Bapak</option>
+                                    <option value="Ibu">Ibu</option>
+                                </select>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label class="block text-sm font-semibold text-slate-700 mb-1.5"
+                                    data-translate="lbl-name">Nama Lengkap</label>
+                                <input type="text" name="name" data-translate-ph="ph-name"
+                                    class="w-full px-4 py-3 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder-slate-400"
+                                    placeholder="Contoh: Budi Santoso" required>
+                            </div>
+                        </div>
+
+                        <!-- Perusahaan & Kota -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
                             <div>
                                 <label class="block text-sm font-semibold text-slate-700 mb-1.5"
-                                    data-translate="lbl-fname">Nama Depan</label>
-                                <!-- Atribut name="name" disesuaikan dengan template emailjs: {{name}} -->
-                                <input type="text" name="name" data-translate-ph="ph-fname"
+                                    data-translate="lbl-cname">Perusahaan</label>
+                                <input type="text" name="company_name" data-translate-ph="ph-cname"
                                     class="w-full px-4 py-3 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder-slate-400"
-                                    placeholder="Budi" required>
+                                    placeholder="PT Contoh Industri" required>
                             </div>
                             <div>
                                 <label class="block text-sm font-semibold text-slate-700 mb-1.5"
-                                    data-translate="lbl-cname">Nama Perusahaan</label>
-                                <input type="text" name="company_name" data-translate-ph="ph-cname"
+                                    data-translate="lbl-city">Kota</label>
+                                <input type="text" name="city" data-translate-ph="ph-city"
                                     class="w-full px-4 py-3 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder-slate-400"
-                                    placeholder="PT Contoh Industri">
+                                    placeholder="Contoh: Jakarta" required>
                             </div>
                         </div>
+
+                        <!-- Email & Phone -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1.5"
+                                    data-translate="lbl-email">Email</label>
+                                <input type="email" name="email" data-translate-ph="ph-email"
+                                    class="w-full px-4 py-3 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder-slate-400"
+                                    placeholder="budi@perusahaan.com" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1.5"
+                                    data-translate="lbl-phone">Phone / WhatsApp</label>
+                                <input type="tel" name="phone" data-translate-ph="ph-phone"
+                                    class="w-full px-4 py-3 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder-slate-400"
+                                    placeholder="0812xxxxxxxx" required>
+                            </div>
+                        </div>
+
+                        <!-- Industri & Kebutuhan (Pilgan / Dropdown) -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1.5"
+                                    data-translate="lbl-industry">Industri</label>
+                                <select name="industry" required
+                                    class="w-full px-4 py-3 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none text-slate-700">
+                                    <option value="" disabled selected>Pilih Industri...</option>
+                                    <option value="Food">Food</option>
+                                    <option value="Plastic">Plastic</option>
+                                    <option value="Recycle">Recycle</option>
+                                    <option value="Pharma">Pharma</option>
+                                    <option value="Other">Lainnya</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1.5"
+                                    data-translate="lbl-needs">Kebutuhan</label>
+                                <select name="needs" required
+                                    class="w-full px-4 py-3 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none text-slate-700">
+                                    <option value="" disabled selected>Pilih Kebutuhan...</option>
+                                    <option value="Metal Detector">Metal Detector</option>
+                                    <option value="X-Ray">X-Ray</option>
+                                    <option value="Check Weigher">Check Weigher</option>
+                                    <option value="Magnetic Trap">Magnetic Trap</option>
+                                    <option value="Magnetic Trap">Kalibrasi</option>
+                                    <option value="Other">Lainnya</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Additional Comment / Specific Inquiry -->
                         <div>
                             <label class="block text-sm font-semibold text-slate-700 mb-1.5"
-                                data-translate="lbl-email">Email Perusahaan</label>
-                            <!-- Atribut name="email" disesuaikan dengan template emailjs: {{email}} -->
-                            <input type="email" name="email" data-translate-ph="ph-email"
+                                data-translate="lbl-msg">Additional Comment / Specific Inquiry</label>
+                            <textarea name="message" rows="5" data-translate-ph="ph-msg"
                                 class="w-full px-4 py-3 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder-slate-400"
-                                placeholder="budi@perusahaan.com" required>
+                                placeholder="Tuliskan spesifikasi teknis tambahan atau detail inquiry Anda di sini..."></textarea>
                         </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-slate-700 mb-1.5"
-                                data-translate="lbl-msg">Pesan / Jenis Mesin yang Dicari</label>
-                            <!-- Atribut name="message" disesuaikan dengan template emailjs: {{message}} -->
-                            <textarea name="message" rows="3" data-translate-ph="ph-msg"
-                                class="w-full px-4 py-3 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none placeholder-slate-400"
-                                placeholder="Kami mencari Metal Detector..." required></textarea>
-                        </div>
+
+                        <!-- Submit Button -->
                         <button type="submit" id="submit-btn"
                             class="w-full bg-brand-600 text-white font-bold py-3.5 px-4 rounded-lg hover:bg-brand-700 transition-all duration-300"
                             data-translate="btn-send">
-                            Kirim Pesan Penawaran
+                            Kirim Pesan Kebutuhan
                         </button>
+
                     </form>
                 </div>
             </div>
@@ -536,7 +602,7 @@
                         <!-- Info Email -->
                         <li class="flex items-center gap-3">
                             <i class="fa-solid fa-envelope text-brand-600 w-4 text-center"></i>
-                            <span>inovasicakrawalasolusi@gmail.com</span>
+                            <span>info@inovasicakrawalasolusi.com</span>
                         </li>
                     </ul>
                 </div>
@@ -637,7 +703,7 @@
                 "lbl-cname": "Nama Perusahaan",
                 "lbl-email": "Email Perusahaan",
                 "lbl-msg": "Pesan / Jenis Mesin yang Dicari",
-                "btn-send": "Kirim Pesan Penawaran",
+                "btn-send": "Kirim Pesan Kebutuhan",
                 "footer-desc": "PT Inovasi Cakrawala Solusi berkomitmen menyediakan peralatan dan jasa inspeksi mutu untuk menunjang keamanan pangan yang memenuhi standar industri tinggi.",
                 "footer-link-title": "Tautan Cepat",
                 "footer-contact-title": "Hubungi Kami",
