@@ -62,25 +62,25 @@
 <body class="font-sans text-slate-800 bg-surface overflow-x-hidden selection:bg-brand-500 selection:text-white">
 
     <!-- Navbar -->
-    <nav id="navbar" class="fixed w-full z-50 glass-nav transition-all duration-500 ease-in-out">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center relative">
+    <nav id="navbar"
+        class="fixed w-full flex justify-center top-0 z-50 glass-nav transition-all duration-500 ease-in-out transform bg-white/90 backdrop-blur-md shadow-sm">
+
+        <div class="max-w-[92%] py-4 md:py-6 md:w-full flex justify-between items-center relative">
+
             <!-- Logo -->
-            <a href="#home" class="flex items-center gap-2">
-                <div class="w-[2rem] h-[2rem] rounded flex items-center justify-center overflow-hidden">
-                    <img src="/assets/Logo Transparant_page-0001.jpg" alt="LogGo Logo"
-                        class="w-full h-full object-contain">
-                </div>
-                <span class="font-bold text-xl tracking-tight text-brand-600">PT Inovasi Cakrawal Solusi
-                    <!-- <span class="text-brand-600">Go</span> -->
-                </span>
-            </a>
+            <div class="w-[73%] sm:w-[30%] md:w-[17%] h-auto">
+                <a href="#home">
+                    <img src="/assets/utama/header_logo.png" alt="Logo PT Inovasi Cakrawala Solusi"
+                        class="w-full h-auto object-contain">
+                </a>
+            </div>
 
             <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
                 <a href="index.html" class="hover:text-brand-600 transition-colors"
                     data-translate="nav-home">Beranda</a>
-                <a href="#product" class="text-brand-600 transition-colors" data-translate="nav-service">Layanan &
-                    Produk</a>
+                <a href="product.html" class="hover:text-brand-600 transition-colors"
+                    data-translate="nav-service">Layanan & Produk</a>
                 <a href="gallery.html" class="hover:text-brand-600 transition-colors"
                     data-translate="nav-gallery">Galeri</a>
                 <a href="index.html#contact" class="hover:text-brand-600 transition-colors"
@@ -99,24 +99,30 @@
 
             <!-- Mobile Menu Toggle & Lang (Mobile) -->
             <div class="flex md:hidden items-center space-x-4">
-                <button id="langToggleMobile" class="flex items-center space-x-1 text-sm font-semibold text-slate-600">
-                    <span id="btn-id-mobile" class="text-brand-600 font-bold transition-all">ID</span>
-                    <span class="text-slate-300">|</span>
-                    <span id="btn-en-mobile" class="transition-all">EN</span>
+                <button id="mobile-menu-btn" class="text-slate-800 focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
                 </button>
-                <button id="mobile-menu-btn" class="text-slate-800 focus:outline-none"><i
-                        class="fa-solid fa-bars text-xl"></i></button>
             </div>
+
         </div>
 
         <!-- Mobile Menu Panel -->
         <div id="mobile-menu"
             class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl transition-all duration-300">
             <div class="px-6 py-4 flex flex-col space-y-4 text-sm font-semibold text-slate-700">
-                <a href="index.html" class="hover:text-brand-600" data-translate="nav-home">Beranda</a>
+
+                <a href="index.html" class="hover:text-brand-600" data-translate="">Beranda</a>
                 <a href="product.html" class="hover:text-brand-600" data-translate="nav-service">Layanan & Produk</a>
-                <a href="gallery.html" class="hover:text-brand-600" data-translate="nav-gallery">Galeri</a>
-                <a href="index.html#contact" class="hover:text-brand-600" data-translate="nav-contact">Contact</a>
+                <a href="gallery.html" class="hover:text-brand-600">Galeri</a>
+                <a href="#contact" class="hover:text-brand-600" data-translate="nav-contact">Contact</a>
+
+                <div class="pb-3 border-b-2"></div>
+
+                <button id="langToggleMobile" class="flex items-center gap-1 text-sm font-semibold text-slate-600 pb-2">
+                    <span id="btn-id-mobile" class="text-brand-600 font-bold transition-all">ID</span>
+                    <span class="text-slate-300">|</span>
+                    <span id="btn-en-mobile" class="transition-all">EN</span>
+                </button>
             </div>
         </div>
     </nav>
@@ -156,7 +162,7 @@
                 <div class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 group overflow-hidden flex flex-col"
                     data-aos="fade-up" data-aos-delay="100">
                     <div class="relative h-60 bg-white p-6 flex items-center justify-center overflow-hidden">
-                        <img src="./assets/02032ec0.webp" alt="INTUITY Metal Detector"
+                        <img src="/assets/utama/THUMBNAIL.webp" alt="INTUITY Metal Detector"
                             class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-6 flex-1 flex flex-col">
@@ -172,8 +178,17 @@
                             <span class="text-xs font-semibold text-slate-500 max-w-[60%]" data-translate="card1-tag">
                                 <!-- <i class="fa-solid fa-industry mr-1"></i> -->
                                 Industri FMCG, Plastik, Daur Ulang, Farmasi, dll</span>
-                            <a href="detailProdukMetal.html"
+
+                            <!-- Tombol Versi ID -->
+                            <a id="detail_id" href="detailProdukMetal.html"
                                 class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-1 group-hover:gap-2 transition-all"
+                                data-translate="btn-detail">
+                                Detail <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                            <!-- Tombol Versi EN (Diberi class hidden dari awal) -->
+                            <a id="detail_eg" href="/detail_produk_eg/metal_eg.html"
+                                class="hidden text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-1 group-hover:gap-2 transition-all"
                                 data-translate="btn-detail">
                                 Detail <i class="fa-solid fa-arrow-right"></i>
                             </a>
@@ -199,8 +214,16 @@
                             <span class="text-xs font-semibold text-slate-500" data-translate="card2-tag">
                                 <!-- <i class="fa-solid fa-recycle mr-1"></i> -->
                                 Industri FMCG, Farmasi, dll</span>
-                            <a href="detailProdukXray.html"
+                            <!-- Tombol Versi ID -->
+                            <a id="detail_id2" href="/detailProdukXray.html"
                                 class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-1 group-hover:gap-2 transition-all"
+                                data-translate="btn-detail">
+                                Detail <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                            <!-- Tombol Versi EN (Diberi class hidden dari awal) -->
+                            <a id="detail_eg2" href="/detail_produk_eg/x-ray_eg.html"
+                                class="hidden text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-1 group-hover:gap-2 transition-all"
                                 data-translate="btn-detail">
                                 Detail <i class="fa-solid fa-arrow-right"></i>
                             </a>
@@ -227,8 +250,16 @@
                             <span class="text-xs font-semibold text-slate-500 max-w-[60%]" data-translate="card3-tag">
                                 <!-- <i class="fa-solid fa-box-open mr-1"></i> -->
                                 Industri FMCG, Plastik, Daur Ulang, Farmasi, dll</span>
-                            <a href="detailProdukMagnet.html"
+                            <!-- Tombol Versi ID -->
+                            <a id="detail_id3" href="/detailProdukMagnet.html"
                                 class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-1 group-hover:gap-2 transition-all"
+                                data-translate="btn-detail">
+                                Detail <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                            <!-- Tombol Versi EN (Diberi class hidden dari awal) -->
+                            <a id="detail_eg3" href="/detail_produk_eg/magnet_eg.html"
+                                class="hidden text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-1 group-hover:gap-2 transition-all"
                                 data-translate="btn-detail">
                                 Detail <i class="fa-solid fa-arrow-right"></i>
                             </a>
@@ -254,8 +285,16 @@
                             <span class="text-xs font-semibold text-slate-500 max-w-[60%]" data-translate="card4-tag">
                                 <!-- <i class="fa-solid fa-box-open mr-1"></i> -->
                                 Industri FMCG, Plastik, Daur Ulang, Farmasi, dll</span>
-                            <a href="detailProdukGauss.html"
+                            <!-- Tombol Versi ID -->
+                            <a id="detail_id4" href="/detailProdukGauss.html"
                                 class="text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-1 group-hover:gap-2 transition-all"
+                                data-translate="btn-detail">
+                                Detail <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                            <!-- Tombol Versi EN (Diberi class hidden dari awal) -->
+                            <a id="detail_eg4" href="/detail_produk_eg/gaus_eg.html"
+                                class="hidden text-brand-600 font-bold text-sm hover:text-brand-800 flex items-center gap-1 group-hover:gap-2 transition-all"
                                 data-translate="btn-detail">
                                 Detail <i class="fa-solid fa-arrow-right"></i>
                             </a>
@@ -286,213 +325,92 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-slate-50 border-t border-slate-200 pt-16 pb-8">
-        <div class="max-w-7xl mx-auto px-6">
+    <!-- === BAGIAN FOOTER (BARU) === -->
+    <footer class="bg-slate-50 border-t border-slate-200 pt-16 pb-8 ">
+        <div id="footer" class="max-w-[93%] mx-auto px-6">
+
+            <!-- Grid Layout (1 Kolom di HP, 3 Kolom di Desktop) -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-12">
-                <div>
-                    <a href="#home" class="flex items-center gap-2 mb-4">
-                        <div class="w-[2rem] h-[2rem] rounded flex items-center justify-center overflow-hidden">
-                            <img src="/assets/Logo Transparant_page-0001.jpg" alt="LogGo Logo"
-                                class="w-full h-full object-contain">
+
+                <!-- Kolom 1: Info Brand -->
+                <div class="flex flex-col gap-6">
+                    <!-- Logo (Menggunakan logo yang sama dengan Navbar) -->
+                    <a href="#home" class="relative">
+                        <div class="w-[55%] rounded flex items-center justify-center overflow-hidden">
+                            <img src="/assets/utama/header_logo.png" alt="LogGo Logo"
+                                class="w-full h-full object-cover">
                         </div>
-                        <span class="font-bold text-xl tracking-tight text-brand-600">PT Inovasi Cakrawal Solusi
-                            <!-- <span class="text-brand-600">Go</span> -->
-                        </span>
                     </a>
-                    <p class="text-sm text-slate-600 leading-relaxed pr-0 md:pr-4" data-translate="footer-desc">
+
+                    <p class="text-sm text-slate-600 leading-relaxed pr-0 md:pr-4 max-w-[85%]"
+                        data-translate="footer-desc">
                         PT Inovasi Cakrawala Solusi berkomitmen menyediakan peralatan dan jasa inspeksi mutu untuk
                         menunjang keamanan pangan yang memenuhi standar industri tinggi.
                     </p>
                 </div>
+
+                <!-- Kolom 2: Quick Links -->
                 <div>
                     <h3 class="font-bold text-slate-900 mb-5 uppercase text-sm tracking-wider"
                         data-translate="footer-link-title">
                         Quick Links
                     </h3>
                     <ul class="space-y-3 text-sm text-slate-600 font-medium">
-                        <li><a href="index.html"
-                                class="hover:text-brand-600 transition-colors flex items-center gap-2"><i
-                                    class="fa-solid fa-angle-right text-xs"></i> <span
-                                    data-translate="nav-home">Beranda</span></a></li>
+                        <li><a href="#home" class="hover:text-brand-600 transition-colors flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Beranda</a></li>
                         <li><a href="index.html#about"
-                                class="hover:text-brand-600 transition-colors flex items-center gap-2"><i
-                                    class="fa-solid fa-angle-right text-xs"></i> <span data-translate="about-us">Tentang
-                                    </span></a></li>
+                                class="hover:text-brand-600 transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-angle-right text-xs"></i> Tentang Kami</a></li>
                         <li><a href="product.html"
                                 class="hover:text-brand-600 transition-colors flex items-center gap-2"
-                                data-translate="nav-service"><i class="fa-solid fa-angle-right text-xs"></i> Layanan &
-                                Produk</a></li>
+                                data-translate="nav-service">
+                                <i class="fa-solid fa-angle-right text-xs"></i> Layanan & Produk</a> </li>
                         <li><a href="gallery.html"
                                 class="hover:text-brand-600 transition-colors flex items-center gap-2"
                                 data-translate="nav-gallery"><i class="fa-solid fa-angle-right text-xs"></i> Galeri</a>
                         </li>
                     </ul>
                 </div>
+
+                <!-- Kolom 3: Contact Info -->
                 <div>
                     <h3 class="font-bold text-slate-900 mb-5 uppercase text-sm tracking-wider"
                         data-translate="footer-contact-title">
                         Contact Us
                     </h3>
                     <ul class="space-y-4 text-sm text-slate-600 font-medium">
+                        <!-- Info Alamat -->
                         <li class="flex items-start gap-3">
                             <i class="fa-solid fa-location-dot mt-1 text-brand-600 w-4 text-center"></i>
                             <span>Perum. The Taman Dhika A6-16,<br>Buduran, Sidoarjo 61252</span>
                         </li>
+                        <!-- Info Telepon -->
                         <li class="flex items-center gap-3">
                             <i class="fa-solid fa-phone text-brand-600 w-4 text-center"></i>
                             <span>+62 819 3290 3670</span>
                         </li>
+                        <!-- Info Email -->
                         <li class="flex items-center gap-3">
                             <i class="fa-solid fa-envelope text-brand-600 w-4 text-center"></i>
                             <span>info@inovasicakrawalasolusi.com</span>
                         </li>
                     </ul>
                 </div>
+
             </div>
+
+            <!-- Bottom Copyright Bar -->
             <div
                 class="pt-8 border-t border-slate-200 text-center text-sm text-slate-500 font-medium flex flex-col md:flex-row justify-between items-center gap-4">
                 <p data-translate="footer-txt">&copy; 2026 PT Inovasi Cakrawala Solusi. Quality Inspection Solutions.
                 </p>
-                <div class="flex space-x-4 text-lg text-slate-400">
-                    <a href="#" class="hover:text-brand-600 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" class="hover:text-brand-600 transition-colors"><i
-                            class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="hover:text-brand-600 transition-colors"><i class="fa-brands fa-facebook"></i></a>
-                </div>
             </div>
+
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/6281932903670" target="_blank"
-        class="fixed bottom-6 right-6 z-[99] bg-[#25D366] text-white rounded-2xl w-14 h-14 flex items-center justify-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-        <i class="fa-brands fa-whatsapp text-3xl"></i>
-    </a>
-
-    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ once: true, offset: 50, duration: 800, easing: 'ease-out-cubic' });
-
-        // Navbar Scroll Logic
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('navbar');
-            if (window.scrollY > 10) {
-                nav.classList.add('shadow-sm');
-            } else {
-                nav.classList.remove('shadow-sm');
-            }
-        });
-
-        // Mobile Menu Toggle Logic
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // === FITUR PENGGANTI BAHASA (MULTI-LANGUAGE) ===
-        const translations = {
-            id: {
-                "nav-home": "Beranda",
-                "nav-service": "Layanan & Produk",
-                "nav-gallery": "Galeri",
-                "nav-contact": "Contact",
-                "prod-badge": "Katalog Produk",
-                "prod-title": "Solusi <span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400\">Inspeksi Mutu</span> Industri",
-                "prod-subtitle": "Jelajahi berbagai sistem inspeksi mesin dan Sistem Magnet Neodymium mutakhir yang dirancang khusus untuk memastikan keamanan pangan lini produksi Anda sesuai standar internasional.",
-                "card1-title": "Metal Detector Conveyor &amp; Gravity-Fall",
-                "card1-desc": "Sistem inspeksi logam presisi tinggi dengan teknologi sensitivitas tinggi dengan performa stabil untuk produk dalam kemasan atau curah pada belt conveyor.",
-                // "card1-tag": "Industri Makanan",
-                "card2-title": "X-Ray",
-                "card2-desc": "Sistem inspeksi sinar-X (X-Ray) terdepan untuk mendeteksi kontaminan logam, kaca, batu, keramik, dan plastik padat pada produk jadi.",
-                //"card2-tag": "Plastik & Daur Ulang",
-                "card3-title": "Magnet Neodymium",
-                "card3-desc": "Magnet Neodymium berkualitas tinggi dan paduan tanah jarang NdFeB yang dibuat dengan metode produksi khusus.",
-                //"card3-tag": "FMCG & Farmasi",
-                "card4-title": "Gauss Meter",
-                "card4-desc": "Alat ukur presisi tinggi untuk menguji kekuatan medan magnet pada sistem pemisah magnetik industri.",
-                //"card4-tag": "FMCG & Farmasi",
-                "btn-detail": "Detail <i class=\"fa-solid fa-arrow-right\"></i>",
-                "cta-title": "Bingung Memilih Mesin yang Tepat?",
-                "cta-desc": "Konsultasikan spesifikasi lini produksi Anda. Tim engineer kami siap memberikan rekomendasi solusi inspeksi yang paling efisien dan mematuhi regulasi industri Anda.",
-                "cta-btn": "<i class=\"fa-brands fa-whatsapp text-xl text-green-500\"></i> Konsultasi Gratis via WhatsApp",
-                "footer-desc": "PT Inovasi Cakrawala Solusi berkomitmen menyediakan peralatan dan jasa inspeksi mutu untuk menunjang keamanan pangan yang memenuhi standar industri tinggi.",
-                "footer-link-title": "Quick Links",
-                "footer-contact-title": "Contact Us",
-                "about-us": "Tentang Kami",
-                "footer-txt": "&copy; 2026 PT Inovasi Cakrawala Solusi. Quality Inspection Solutions."
-            },
-            en: {
-                "nav-home": "Home",
-                "nav-service": "Services & Products",
-                "nav-gallery": "Gallery",
-                "nav-contact": "Contact",
-                "prod-badge": "Our Product Catalog",
-                "prod-title": "Industrial <span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400\">Quality Inspection</span> Solutions",
-                "prod-subtitle": "Explore various advanced machine inspection systems and Neodymium Magnet Systems specifically designed to ensure food safety in your production line according to international standards.",
-                "card1-title": "Metal Detector Conveyor &amp; Gravity-Fall",
-                "card1-desc": "High-precision metal inspection system with high sensitivity technology and stable performance for packaged or bulk products on a belt conveyor.",
-                "card1-tag": "Food Industry",
-                "card2-title": "X-Ray",
-                "card2-desc": "Leading X-ray inspection systems to detect metal, glass, stone, ceramic, and hard plastic contaminants in finished products.",
-                "card2-tag": "Plastic & Recycling",
-                "card3-title": "Neodymium Magnet",
-                "card3-desc": "High-quality Neodymium magnets and NdFeB rare earth alloys manufactured with specialized production methods.",
-                "card3-tag": "FMCG & Pharma",
-                "card4-title": "Gauss Meter",
-                "card4-desc": "High-precision measuring instrument to test magnetic field strength on industrial magnetic separator systems.",
-                "card4-tag": "FMCG & Pharma",
-                "btn-detail": "Detail <i class=\"fa-solid fa-arrow-right\"></i>",
-                "cta-title": "Confused About Choosing the Right Machine?",
-                "cta-desc": "Consult your production line specifications. Our engineering team is ready to provide the most efficient inspection solution recommendations compliant with your industry regulations.",
-                "cta-btn": "<i class=\"fa-brands fa-whatsapp text-xl text-green-500\"></i> Free Consultation via WhatsApp",
-                "footer-desc": "PT Inovasi Cakrawala Solusi is committed to providing quality inspection equipment and services to support food safety meeting high industrial standards.",
-                "footer-link-title": "Quick Links",
-                "footer-contact-title": "Contact Us",
-                "about-us": "About Us",
-                "footer-txt": "&copy; 2026 PT Inovasi Cakrawala Solusi. Quality Inspection Solutions."
-            }
-        };
-
-        let currentLang = 'id';
-
-        function setLanguage(lang) {
-            currentLang = lang;
-            document.querySelectorAll('[data-translate]').forEach(el => {
-                const key = el.getAttribute('data-translate');
-                if (translations[lang][key]) el.innerHTML = translations[lang][key];
-            });
-
-            const activeClasses = ['text-brand-600', 'font-bold'];
-            ['desktop', 'mobile'].forEach(type => {
-                const btnID = document.getElementById(`btn-id-${type}`);
-                const btnEN = document.getElementById(`btn-en-${type}`);
-                if (lang === 'id') {
-                    btnID.classList.add(...activeClasses);
-                    btnEN.classList.remove(...activeClasses);
-                } else {
-                    btnEN.classList.add(...activeClasses);
-                    btnID.classList.remove(...activeClasses);
-                }
-            });
-        }
-
-        const toggleLang = () => setLanguage(currentLang === 'id' ? 'en' : 'id');
-        document.getElementById('langToggleDesktop').addEventListener('click', toggleLang);
-        document.getElementById('langToggleMobile').addEventListener('click', toggleLang);
-
-        setLanguage('id');
-    </script>
+    <script src="/scripts/product.js"></script>
 </body>
 
 </html>

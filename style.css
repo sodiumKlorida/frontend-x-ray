@@ -42,7 +42,7 @@
     #title-hero {
         font-size: 43px;
 
-        max-width: 74%;
+        max-width: 80%;
     }
 
     #footer {
@@ -94,7 +94,14 @@
     .home {
         /* Sesuaikan tinggi atau padding untuk layar yang lebih luas */
         max-width: 88%;
+        /* border: 1px solid black; */
         gap: 9rem;
+    }
+    
+    #title-hero {
+        font-size: 320%;
+        /* border: 1px solid black; */
+        max-width: 89%;
     }
 
     .about {

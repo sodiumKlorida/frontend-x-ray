@@ -47,40 +47,26 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./style.css">
 
-
+    <link rel="icon" href="/assets/Logo_Transparant_page-0001-removebg-preview 1.svg">
 </head>
 
 <body class="font-sans text-slate-800 bg-white overflow-x-hidden selection:bg-brand-500 selection:text-white">
 
     <!-- Navbar -->
     <nav id="navbar"
-        class="fixed overflow-hidden w-full top-0 z-50 glass-nav transition-all duration-500 ease-in-out transform">
-        <div class="max-w-[92%] mx-auto py-5 flex justify-between items-center relative">
+        class="fixed w-full flex justify-center top-0 z-50 glass-nav transition-all duration-500 ease-in-out transform bg-white/90 backdrop-blur-md shadow-sm">
+
+        <div class="max-w-[92%] py-4 md:py-6 md:w-full flex justify-between items-center relative">
 
             <!-- Logo -->
-            <a href="#home" class="absolute flex items-center gap-2">
-                <!-- Sesuaikan width (w) dan height (h) ke ukuran navbar yang normal -->
-                <div class="w-[17rem] h-[8rem] rounded flex items-center justify-center overflow-hidden">
-                    <!-- Gunakan object-cover jika ingin memaksa gambar memenuhi div dan terpotong (overflow-hidden akan bekerja di sini) -->
-                    <!-- Atau tetap gunakan object-contain jika hanya ingin logonya pas di dalam kotak -->
-                    <img src="/assets/Logo_Landscape_Transparant_page-0001-removebg-preview.png" alt="LogGo Logo"
-                        class="w-full h-full object-cover">
-                </div>
-            </a>
-
-            <a href="#home" class="opacity-0 flex items-center gap-2">
-                <!-- Sesuaikan width (w) dan height (h) ke ukuran navbar yang normal -->
-                <div
-                    class="w-[2rem] h-[2rem] border border-red-600 rounded flex items-center justify-center overflow-hidden">
-                    <!-- Gunakan object-cover jika ingin memaksa gambar memenuhi div dan terpotong (overflow-hidden akan bekerja di sini) -->
-                    <!-- Atau tetap gunakan object-contain jika hanya ingin logonya pas di dalam kotak -->
-                    <img src="/assets/Logo_Landscape_Transparant_page-0001-removebg-preview.png" alt="LogGo Logo"
-                        class="w-full h-full object-cover">
-                </div>
-            </a>
+            <div class="w-[73%] sm:w-[30%] md:w-[17%] h-auto">
+                <a href="#home">
+                    <img src="/assets/utama/header_logo.png" alt="Logo PT Inovasi Cakrawala Solusi"
+                        class="w-full h-auto object-contain">
+                </a>
+            </div>
 
             <!-- Desktop Menu -->
-            <!-- <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600"> -->
             <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
                 <a href="product.html" class="hover:text-brand-600 transition-colors"
                     data-translate="nav-service">Layanan & Produk</a>
@@ -102,26 +88,33 @@
 
             <!-- Mobile Menu Toggle & Lang (Mobile) -->
             <div class="flex md:hidden items-center space-x-4">
-                <button id="langToggleMobile" class="flex items-center space-x-1 text-sm font-semibold text-slate-600">
+                <button id="mobile-menu-btn" class="text-slate-800 focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl transition-all duration-300">
+            <div class="px-6 py-4 flex flex-col space-y-4 text-sm font-semibold text-slate-700">
+
+                <a href="product.html" class="hover:text-brand-600" data-translate="nav-service">Layanan & Produk</a>
+                <a href="gallery.html" class="hover:text-brand-600">Galeri</a>
+                <a href="#contact" class="hover:text-brand-600" data-translate="nav-contact">Contact</a>
+
+                <div class="pb-3 border-b-2"></div>
+
+                <button id="langToggleMobile" class="flex items-center gap-1 text-sm font-semibold text-slate-600 pb-2">
                     <span id="btn-id-mobile" class="text-brand-600 font-bold transition-all">ID</span>
                     <span class="text-slate-300">|</span>
                     <span id="btn-en-mobile" class="transition-all">EN</span>
                 </button>
-                <button id="mobile-menu-btn" class="text-slate-800 focus:outline-none"><i
-                        class="fa-solid fa-bars text-xl"></i></button>
-            </div>
-        </div>
-
-        <!-- Mobile Menu Panel (Baru) -->
-        <div id="mobile-menu"
-            class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl transition-all duration-300">
-            <div class="px-6 py-4 flex flex-col space-y-4 text-sm font-semibold text-slate-700">
-                <a href="product.html" class="hover:text-brand-600" data-translate="nav-service">Layanan & Produk</a>
-                <a href="gallery.html" class="hover:text-brand-600">Galeri</a>
-                <a href="#contact" class="hover:text-brand-600" data-translate="nav-contact">Contact</a>
             </div>
         </div>
     </nav>
+
 
     <!-- Hero Section -->
     <section id="home"
@@ -137,17 +130,7 @@
         <div class="home relative z-10 grid md:grid-cols-2 items-center">
             <!-- Text Content -->
             <div data-aos="fade-right" data-aos-duration="1000" class="text-center md:text-left mt-0">
-                <!-- Badge -->
-                <!-- <div
-                    class="inline-flex items-center gap-2 px-3 shadow-md py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xs font-bold uppercase tracking-wider mb-6">
-                    <span class="relative flex h-2 w-2">
-                        <span
-                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
-                    </span>
-                    PT Inovasi Cakrawal Solusi
-                </div> -->
-
+            
                 <h1 id="title-hero"
                     class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-6 max-w-2xl"
                     data-translate="hero-title">
@@ -197,7 +180,7 @@
                     style="transform-style: preserve-3d;">
 
                     <!-- Gambar Utama -->
-                    <img src="./assets/02032ec0.webp" alt="High Tech Metal Detector Machinery"
+                    <img src="./assets/utama/THUMBNAIL.webp" alt="High Tech Metal Detector Machinery"
                         class="image-hero w-full h-full aspect-[4/3] md:aspect-video object-cover rounded-2xl shadow-xl bg-white/90 border border-slate-200/60 opacity-95 transition-transform duration-300 group-hover:scale-[1.01]">
 
                     <!-- Floating Card 1: Kiri Atas -->
@@ -240,9 +223,9 @@
                 <div class="grid grid-cols-2 gap-4 md:gap-8 order-2 md:order-1" data-aos="fade-up">
                     <!-- <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                         alt="High Tech Machinery" -->
-                    <img src="./assets/pexels-biravencrow-38336747 (1).jpg" alt="High Tech Machinery"
+                    <img src="/assets/utama/aboute1.jpg" alt="High Tech Machinery"
                         class="rounded-xl hidden md:block object-cover h-40 md:h-64 w-full shadow-lg border border-slate-200 bg-white p-1">
-                    <img src="./assets/pexels-vladimirsrajber-18631420.jpg" alt="Clean Modern Corporate"
+                    <img src="/assets/utama/aboute2.jpg" alt="Clean Modern Corporate"
                         class="rounded-xl hidden md:block object-cover h-40 md:h-64 w-full shadow-lg mt-6 md:mt-10 border border-slate-200 bg-white p-1">
                 </div>
 
@@ -272,11 +255,6 @@
                             <p class="text-xs text-slate-500 font-bold uppercase tracking-wider"
                                 data-translate="stat-exp">Tahun Pengalaman</p>
                         </div>
-                        <!-- <div>
-                            <p class="text-3xl font-extrabold text-brand-600 mb-1">500+</p>
-                            <p class="text-xs text-slate-500 font-bold uppercase tracking-wider"
-                                data-translate="stat-unit">Unit Terinstal</p>
-                        </div> -->
                         <div>
                             <p class="text-3xl font-extrabold text-brand-600 mb-1">24/7</p>
                             <p class="text-xs text-slate-500 font-bold uppercase tracking-wider"
@@ -287,9 +265,10 @@
                             <p class="text-xs text-slate-500 font-bold uppercase tracking-wider"
                                 data-translate="stat-support">Strict Internal QC To Ensure Quality</p>
                         </div>
+
                         <div>
                             <!-- Icon Trend Bearish / Menurun -->
-                            <div class="flex items-center mb-1">
+                            <div class="md:flex md:items-center md:justify-start mb-1 flex justify-center">
                                 <svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" stroke-width="2.5"
                                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -555,19 +534,17 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-12">
 
                 <!-- Kolom 1: Info Brand -->
-                <div>
+                <div class="flex flex-col gap-6">
                     <!-- Logo (Menggunakan logo yang sama dengan Navbar) -->
-                    <a href="#home" class="flex items-center gap-2 mb-4">
-                        <div class="w-[2rem] h-[2rem] rounded flex items-center justify-center overflow-hidden">
-                            <img src="/assets/Logo Transparant_page-0001.jpg" alt="LogGo Logo"
-                                class="w-full h-full object-contain">
+                    <a href="#home" class="relative">
+                        <div class="w-[55%] rounded flex items-center justify-center overflow-hidden">
+                            <img src="/assets/utama/header_logo.png" alt="LogGo Logo"
+                                class="w-full h-full object-cover">
                         </div>
-                        <span class="font-bold text-xl tracking-tight text-brand-600">PT Inovasi Cakrawal Solusi
-                            <!-- <span class="text-brand-600">Go</span> -->
-                        </span>
                     </a>
 
-                    <p class="text-sm text-slate-600 leading-relaxed pr-0 md:pr-4" data-translate="footer-desc">
+                    <p class="text-sm text-slate-600 leading-relaxed pr-0 md:pr-4 max-w-[85%]"
+                        data-translate="footer-desc">
                         PT Inovasi Cakrawala Solusi berkomitmen menyediakan peralatan dan jasa inspeksi mutu untuk
                         menunjang keamanan pangan yang memenuhi standar industri tinggi.
                     </p>
