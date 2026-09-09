@@ -14,23 +14,3 @@ Website resmi Company Profile untuk **X-Ray**, dirancang untuk memberikan inform
 *   **Navigasi Interaktif:** Transisi halaman yang mulus dan *user experience* (UX) yang intuitif.
 *   **Halaman Kontak:** Memudahkan klien untuk terhubung langsung dengan tim (terintegrasi dengan form email/WhatsApp).
 
-## 🛠️ Teknologi yang Digunakan
-
-*(Silakan sesuaikan bagian ini dengan teknologi yang Anda gunakan)*
-
-*   **Frontend Framework:** React.js / Next.js / Vue.js
-*   **Styling:** Tailwind CSS / Bootstrap / SASS
-*   **Deployment:** Vercel
-*   **Package Manager:** npm / yarn / pnpm
-
-## 💻 Cara Instalasi & Menjalankan di Lokal
-
-Jika Anda ingin menjalankan proyek ini di mesin lokal untuk keperluan pengembangan, ikuti langkah-langkah berikut:
-
-### Prasyarat
-Pastikan Anda telah menginstal [Node.js](https://nodejs.org/) di komputer Anda.
-
-### Langkah-langkah
-1. **Clone repositori ini:**
-   ```bash
-   git clone [https://github.com/username-anda/repo-x-ray.git](https://github.com/username-anda/repo-x-ray.git)
