@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeri - Technology</title>
+    <title>Galeri Instalasi & Kegiatan</title>
 
     <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,9 +20,17 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
                     colors: {
-                        brand: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 900: '#1e3a8a' },
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                        },
                         surface: '#f8fafc',
                     }
                 }
@@ -29,51 +38,49 @@
         }
     </script>
 
-    <!-- AOS Animation CSS & FontAwesome -->
+    <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <style>
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-        .bg-grid-pattern {
-            background-image: linear-gradient(to right, #f1f5f9 1px, transparent 1px),
-                linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-        .gallery-overlay {
-            background: linear-gradient(to top, rgba(30, 58, 138, 0.9) 0%, rgba(30, 58, 138, 0.2) 50%, transparent 100%);
-        }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="icon" href="/assets/utama/Logo_Transparant_page-0001-removebg-preview 1.svg">
 </head>
 
 <body class="font-sans text-slate-800 bg-surface overflow-x-hidden selection:bg-brand-500 selection:text-white">
 
     <!-- Navbar -->
-    <nav id="navbar" class="fixed w-full flex justify-center top-0 z-50 glass-nav transition-all duration-500 ease-in-out transform bg-white/90 backdrop-blur-md shadow-sm">
+    <nav id="navbar"
+        class="fixed w-full flex justify-center top-0 z-50 glass-nav transition-all duration-500 ease-in-out transform bg-white/90 backdrop-blur-md shadow-sm">
         <div class="max-w-[92%] py-4 md:py-6 md:w-full flex justify-between items-center relative">
-            
+
             <!-- Logo -->
             <div class="w-[73%] sm:w-[30%] md:w-[17%] h-auto">
                 <a href="#home">
-                    <img src="/assets/utama/header_logo.png" alt="Logo PT Inovasi Cakrawala Solusi" class="w-full h-auto object-contain">
+                    <img src="/assets/utama/header_logo.png" alt="Logo PT Inovasi Cakrawala Solusi"
+                        class="w-full h-auto object-contain">
                 </a>
             </div>
 
             <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
-                <a href="index.html" class="hover:text-brand-600 transition-colors" data-translate="nav-home">Beranda</a>
-                <a href="product.html" class="hover:text-brand-600 transition-colors" data-translate="nav-service">Layanan & Produk</a>
-                <a href="gallery.html" class="hover:text-brand-600 transition-colors" data-translate="nav-gallery">Galeri</a>
-                <a href="index.html#contact" class="hover:text-brand-600 transition-colors" data-translate="nav-contact">Contact</a>
+                <a href="index.html" class="hover:text-brand-600 transition-colors"
+                    data-translate="nav-home">Beranda</a>
+                <a href="product.html" class="hover:text-brand-600 transition-colors"
+                    data-translate="nav-service">Layanan & Produk</a>
+                <a href="gallery.html" class="hover:text-brand-600 transition-colors text-brand-600"
+                    data-translate="nav-gallery">Galeri</a>
+                <a href="index.html#contact" class="hover:text-brand-600 transition-colors"
+                    data-translate="nav-contact">Contact</a>
             </div>
 
             <!-- Right Actions (Desktop) -->
             <div class="hidden md:flex items-center space-x-8">
-                <button id="langToggleDesktop" class="flex items-center space-x-1 text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">
+                <button id="langToggleDesktop"
+                    class="flex items-center space-x-1 text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">
                     <span id="btn-id-desktop" class="text-brand-600 font-bold transition-all">ID</span>
                     <span class="text-slate-300">|</span>
                     <span id="btn-en-desktop" class="transition-all">EN</span>
@@ -90,7 +97,8 @@
         </div>
 
         <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl transition-all duration-300">
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl transition-all duration-300">
             <div class="px-6 py-4 flex flex-col space-y-4 text-sm font-semibold text-slate-700">
                 <a href="index.html" class="hover:text-brand-600" data-translate="nav-home">Beranda</a>
                 <a href="product.html" class="hover:text-brand-600" data-translate="nav-service">Layanan & Produk</a>
@@ -110,16 +118,23 @@
 
     <!-- Header Section -->
     <section class="relative pt-36 pb-20 bg-white bg-grid-pattern overflow-hidden">
-        <div class="absolute top-0 left-1/2 w-[800px] h-[400px] bg-brand-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div
+            class="absolute top-0 left-1/2 w-[800px] h-[400px] bg-brand-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 transform -translate-x-1/2 -translate-y-1/2">
+        </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xs font-bold uppercase tracking-wider mb-6" data-aos="fade-down" data-translate="gal-badge">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xs font-bold uppercase tracking-wider mb-6"
+                data-aos="fade-down" data-translate="gal-badge">
                 Dokumentasi & Portofolio
             </div>
-            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6" data-aos="fade-up" data-aos-delay="100" data-translate="gal-title">
-                Galeri <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400">Instalasi & Kegiatan</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6" data-aos="fade-up"
+                data-aos-delay="100" data-translate="gal-title">
+                Galeri <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400">Instalasi
+                    & Kegiatan</span>
             </h1>
-            <p class="text-slate-600 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200" data-translate="gal-subtitle">
-                Lihat langsung bagaimana solusi mesin inspeksi kami diimplementasikan di berbagai lini produksi klien untuk menjaga kualitas dan keamanan produk.
+            <p class="text-slate-600 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200"
+                data-translate="gal-subtitle">
+                Lihat langsung bagaimana solusi mesin inspeksi kami diimplementasikan di berbagai lini produksi klien
+                untuk menjaga kualitas dan keamanan produk.
             </p>
         </div>
     </section>
@@ -130,92 +145,139 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 <!-- Item 1 -->
-                <div class="group relative rounded-2xl overflow-hidden bg-slate-100 aspect-square cursor-pointer" data-aos="fade-up" data-aos-delay="200">
-                    <img src="./assets/gallery/20220915_143741.jpg" alt="X-Ray Scanner" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out">
-                    <div class="absolute inset-0 gallery-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="text-brand-100 text-xs font-bold uppercase tracking-wider mb-1" data-translate="gal-tag1">Instalasi Mesin</span>
+                <div class="group relative rounded-2xl overflow-hidden bg-slate-100 aspect-square cursor-pointer"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <img src="/assets/gallery/Group 16.webp" alt="X-Ray Scanner"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                    <div
+                        class="absolute inset-0 gallery-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-brand-100 text-xs font-bold uppercase tracking-wider mb-1"
+                            data-translate="gal-tag1">Instalasi Mesin</span>
                         <h3 class="text-white text-lg font-bold" data-translate="gal-title1">Setup RAYCON D+ X-Ray</h3>
-                        <p class="text-slate-300 text-sm mt-2 line-clamp-2" data-translate="gal-desc1">Inspeksi kontaminan pada produk farmasi kemasan botol.</p>
+                        <p class="text-slate-300 text-sm mt-2 line-clamp-2" data-translate="gal-desc1">Inspeksi
+                            kontaminan pada produk farmasi kemasan botol.</p>
                     </div>
                 </div>
 
                 <!-- Item 2 -->
-                <div class="group relative rounded-2xl overflow-hidden bg-slate-100 aspect-square cursor-pointer" data-aos="fade-up" data-aos-delay="300">
-                    <img src="/assets/gallery/20221123_141416.jpg" alt="Training" class="w-full h-full object-cover transition-transform duration-700 ease-in-out">
-                    <div class="absolute inset-0 gallery-overlay opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="text-brand-100 text-xs font-bold uppercase tracking-wider mb-1" data-translate="gal-tag2">Training & Support</span>
-                        <h3 class="text-white text-lg font-bold" data-translate="gal-title2">Pelatihan Operator Pabrik</h3>
-                        <p class="text-slate-300 text-sm mt-2 line-clamp-2" data-translate="gal-desc2">Tim teknis kami memberikan training operasional mesin kepada staf pabrik.</p>
+                <div class="group relative rounded-2xl overflow-hidden bg-slate-100 aspect-square cursor-pointer"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <img src="/assets/gallery/Group 15.webp" alt="Training"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-in-out">
+                    <div
+                        class="absolute inset-0 gallery-overlay opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-brand-100 text-xs font-bold uppercase tracking-wider mb-1"
+                            data-translate="gal-tag2">Training & Support</span>
+                        <h3 class="text-white text-lg font-bold" data-translate="gal-title2">Pelatihan Operator Pabrik
+                        </h3>
+                        <p class="text-slate-300 text-sm mt-2 line-clamp-2" data-translate="gal-desc2">Tim teknis kami
+                            memberikan training operasional mesin kepada staf pabrik.</p>
                     </div>
                 </div>
 
                 <!-- Item 3 -->
-                <div class="group relative rounded-2xl overflow-hidden bg-slate-100 aspect-square cursor-pointer" data-aos="fade-up" data-aos-delay="100">
-                    <img src="./assets/gallery/20230112_142630.jpg" alt="RAPID 5000" class="w-full h-full object-cover transition-transform duration-700 ease-in-out">
-                    <div class="absolute inset-0 gallery-overlay opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="text-brand-100 text-xs font-bold uppercase tracking-wider mb-1" data-translate="gal-tag3">Instalasi Mesin</span>
+                <div class="group relative rounded-2xl overflow-hidden bg-slate-100 aspect-square cursor-pointer"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <img src="/assets/gallery/Group 12.webp" alt="RAPID 5000"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-in-out">
+                    <div
+                        class="absolute inset-0 gallery-overlay opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-brand-100 text-xs font-bold uppercase tracking-wider mb-1"
+                            data-translate="gal-tag3">Instalasi Mesin</span>
                         <h3 class="text-white text-lg font-bold" data-translate="gal-title3">Integrasi RAPID 5000</h3>
-                        <p class="text-slate-300 text-sm mt-2 line-clamp-2" data-translate="gal-desc3">Pemisah logam untuk bijih plastik di fasilitas daur ulang.</p>
+                        <p class="text-slate-300 text-sm mt-2 line-clamp-2" data-translate="gal-desc3">Pemisah logam
+                            untuk bijih plastik di fasilitas daur ulang.</p>
                     </div>
                 </div>
 
                 <!-- Item 4 -->
-                <div class="group relative rounded-2xl overflow-hidden bg-slate-100 aspect-square cursor-pointer" data-aos="fade-up" data-aos-delay="200">
-                    <img src="/assets/gallery/20230123_103417.jpg" alt="Exhibition" class="w-full h-full object-cover transition-transform duration-700 ease-in-out">
-                    <div class="absolute inset-0 gallery-overlay opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="text-brand-100 text-xs font-bold uppercase tracking-wider mb-1" data-translate="gal-tag4">Pameran</span>
-                        <h3 class="text-white text-lg font-bold" data-translate="gal-title4">Expo Industri Manufaktur 2025</h3>
-                        <p class="text-slate-300 text-sm mt-2 line-clamp-2" data-translate="gal-desc4">Booth pameran teknologi inspeksi keamanan pangan terbesar di Jakarta.</p>
+                <div class="group relative rounded-2xl overflow-hidden bg-slate-100 aspect-square cursor-pointer"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <img src="/assets/gallery/Group 18.webp" alt="Exhibition"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-in-out">
+                    <div
+                        class="absolute inset-0 gallery-overlay opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-brand-100 text-xs font-bold uppercase tracking-wider mb-1"
+                            data-translate="gal-tag4">Pameran</span>
+                        <h3 class="text-white text-lg font-bold" data-translate="gal-title4">Expo Industri Manufaktur
+                            2025</h3>
+                        <p class="text-slate-300 text-sm mt-2 line-clamp-2" data-translate="gal-desc4">Booth pameran
+                            teknologi inspeksi keamanan pangan terbesar di Jakarta.</p>
                     </div>
                 </div>
 
                 <!-- Item 5 -->
-                <div class="group relative rounded-2xl overflow-hidden bg-slate-100 aspect-square cursor-pointer" data-aos="fade-up" data-aos-delay="100">
-                    <img src="./assets/gallery/20230725_144323.jpg" alt="RAPID 5000" class="w-full h-full object-cover transition-transform duration-700 ease-in-out">
-                    <div class="absolute inset-0 gallery-overlay opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="text-brand-100 text-xs font-bold uppercase tracking-wider mb-1" data-translate="gal-tag5">Instalasi Mesin</span>
+                <div class="group relative rounded-2xl overflow-hidden bg-slate-100 aspect-square cursor-pointer"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <img src="./assets/gallery/Group 14.webp" alt="RAPID 5000"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-in-out">
+                    <div
+                        class="absolute inset-0 gallery-overlay opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-brand-100 text-xs font-bold uppercase tracking-wider mb-1"
+                            data-translate="gal-tag5">Instalasi Mesin</span>
                         <h3 class="text-white text-lg font-bold" data-translate="gal-title5">Integrasi RAPID 5000</h3>
-                        <p class="text-slate-300 text-sm mt-2 line-clamp-2" data-translate="gal-desc5">Pemisah logam untuk bijih plastik di fasilitas daur ulang.</p>
+                        <p class="text-slate-300 text-sm mt-2 line-clamp-2" data-translate="gal-desc5">Pemisah logam
+                            untuk bijih plastik di fasilitas daur ulang.</p>
                     </div>
                 </div>
 
                 <!-- Item 6 -->
-                <div class="group relative rounded-2xl overflow-hidden bg-slate-100 aspect-square cursor-pointer" data-aos="fade-up" data-aos-delay="100">
-                    <img src="./assets/gallery/20231214_132817.jpg" alt="RAPID 5000" class="w-full h-full object-cover transition-transform duration-700 ease-in-out">
-                    <div class="absolute inset-0 gallery-overlay opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="text-brand-100 text-xs font-bold uppercase tracking-wider mb-1" data-translate="gal-tag6">Instalasi Mesin</span>
+                <div class="group relative rounded-2xl overflow-hidden bg-slate-100 aspect-square cursor-pointer"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <img src="/assets/gallery/Group 11.webp" alt="RAPID 5000"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-in-out">
+                    <div
+                        class="absolute inset-0 gallery-overlay opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-brand-100 text-xs font-bold uppercase tracking-wider mb-1"
+                            data-translate="gal-tag6">Instalasi Mesin</span>
                         <h3 class="text-white text-lg font-bold" data-translate="gal-title6">Integrasi RAPID 5000</h3>
-                        <p class="text-slate-300 text-sm mt-2 line-clamp-2" data-translate="gal-desc6">Pemisah logam untuk bijih plastik di fasilitas daur ulang.</p>
+                        <p class="text-slate-300 text-sm mt-2 line-clamp-2" data-translate="gal-desc6">Pemisah logam
+                            untuk bijih plastik di fasilitas daur ulang.</p>
                     </div>
                 </div>
 
                 <!-- Item 7 -->
-                <div class="group relative rounded-2xl overflow-hidden bg-slate-100 aspect-square cursor-pointer" data-aos="fade-up" data-aos-delay="100">
-                    <img src="./assets/gallery/IMG_20240709_163733.jpg" alt="RAPID 5000" class="w-full h-full object-cover transition-transform duration-700 ease-in-out">
-                    <div class="absolute inset-0 gallery-overlay opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="text-brand-100 text-xs font-bold uppercase tracking-wider mb-1" data-translate="gal-tag7">Instalasi Mesin</span>
+                <div class="group relative rounded-2xl overflow-hidden bg-slate-100 aspect-square cursor-pointer"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <img src="/assets/gallery/Group 10.webp" alt="RAPID 5000"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-in-out">
+                    <div
+                        class="absolute inset-0 gallery-overlay opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-brand-100 text-xs font-bold uppercase tracking-wider mb-1"
+                            data-translate="gal-tag7">Instalasi Mesin</span>
                         <h3 class="text-white text-lg font-bold" data-translate="gal-title7">Integrasi RAPID 5000</h3>
-                        <p class="text-slate-300 text-sm mt-2 line-clamp-2" data-translate="gal-desc7">Pemisah logam untuk bijih plastik di fasilitas daur ulang.</p>
+                        <p class="text-slate-300 text-sm mt-2 line-clamp-2" data-translate="gal-desc7">Pemisah logam
+                            untuk bijih plastik di fasilitas daur ulang.</p>
                     </div>
                 </div>
 
                 <!-- Item 8 -->
-                <div class="group relative rounded-2xl overflow-hidden bg-slate-100 aspect-square cursor-pointer" data-aos="fade-up" data-aos-delay="100">
-                    <img src="./assets/gallery/IMG_20250207_115030.jpg" alt="RAPID 5000" class="w-full h-full object-cover transition-transform duration-700 ease-in-out">
-                    <div class="absolute inset-0 gallery-overlay opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="text-brand-100 text-xs font-bold uppercase tracking-wider mb-1" data-translate="gal-tag8">Instalasi Mesin</span>
+                <div class="group relative rounded-2xl overflow-hidden bg-slate-100 aspect-square cursor-pointer"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <img src="/assets/gallery/Group 9.webp" alt="RAPID 5000"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-in-out">
+                    <div
+                        class="absolute inset-0 gallery-overlay opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-brand-100 text-xs font-bold uppercase tracking-wider mb-1"
+                            data-translate="gal-tag8">Instalasi Mesin</span>
                         <h3 class="text-white text-lg font-bold" data-translate="gal-title8">Integrasi RAPID 5000</h3>
-                        <p class="text-slate-300 text-sm mt-2 line-clamp-2" data-translate="gal-desc8">Pemisah logam untuk bijih plastik di fasilitas daur ulang.</p>
+                        <p class="text-slate-300 text-sm mt-2 line-clamp-2" data-translate="gal-desc8">Pemisah logam
+                            untuk bijih plastik di fasilitas daur ulang.</p>
                     </div>
                 </div>
 
                 <!-- Item 9 -->
-                <div class="group relative rounded-2xl overflow-hidden bg-slate-100 aspect-square cursor-pointer" data-aos="fade-up" data-aos-delay="100">
-                    <img src="./assets/gallery/IMG_20250325_110354.jpg" alt="RAPID 5000" class="w-full h-full object-cover transition-transform duration-700 ease-in-out">
-                    <div class="absolute inset-0 gallery-overlay opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="text-brand-100 text-xs font-bold uppercase tracking-wider mb-1" data-translate="gal-tag9">Instalasi Mesin</span>
+                <div class="group relative rounded-2xl overflow-hidden bg-slate-100 aspect-square cursor-pointer"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <img src="/assets/gallery/Group 17.webp" alt="RAPID 5000"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-in-out">
+                    <div
+                        class="absolute inset-0 gallery-overlay opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-brand-100 text-xs font-bold uppercase tracking-wider mb-1"
+                            data-translate="gal-tag9">Instalasi Mesin</span>
                         <h3 class="text-white text-lg font-bold" data-translate="gal-title9">Integrasi RAPID 5000</h3>
-                        <p class="text-slate-300 text-sm mt-2 line-clamp-2" data-translate="gal-desc9">Pemisah logam untuk bijih plastik di fasilitas daur ulang.</p>
+                        <p class="text-slate-300 text-sm mt-2 line-clamp-2" data-translate="gal-desc9">Pemisah logam
+                            untuk bijih plastik di fasilitas daur ulang.</p>
                     </div>
                 </div>
             </div>
@@ -224,11 +286,16 @@
 
     <!-- CTA Section -->
     <section class="py-20 bg-brand-900 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+        </div>
         <div class="max-w-4xl mx-auto px-6 relative z-10 text-center" data-aos="zoom-in">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" data-translate="cta-title">Tertarik dengan Solusi Kami?</h2>
-            <p class="text-brand-100 mb-8 max-w-2xl mx-auto" data-translate="cta-desc">Jadwalkan kunjungan ke fasilitas Anda atau konsultasikan kebutuhan sistem inspeksi Anda secara online bersama tim ahli kami.</p>
-            <a href="https://wa.me/6281234567890" target="_blank" class="inline-flex items-center gap-2 bg-white text-brand-900 font-bold px-8 py-4 rounded-xl hover:bg-brand-50 hover:scale-105 transition-all shadow-lg" data-translate="cta-btn">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" data-translate="cta-title">Tertarik dengan Solusi
+                Kami?</h2>
+            <p class="text-brand-100 mb-8 max-w-2xl mx-auto" data-translate="cta-desc">Jadwalkan kunjungan ke fasilitas
+                Anda atau konsultasikan kebutuhan sistem inspeksi Anda secara online bersama tim ahli kami.</p>
+            <a href="https://wa.me/6281234567890" target="_blank"
+                class="inline-flex items-center gap-2 bg-white text-brand-900 font-bold px-8 py-4 rounded-xl hover:bg-brand-50 hover:scale-105 transition-all shadow-lg"
+                data-translate="cta-btn">
                 <i class="fa-solid fa-calendar-check text-xl text-brand-600"></i> Jadwalkan Konsultasi
             </a>
         </div>
@@ -241,33 +308,64 @@
                 <div class="flex flex-col gap-6">
                     <a href="#home" class="relative">
                         <div class="w-[55%] rounded flex items-center justify-center overflow-hidden">
-                            <img src="/assets/utama/header_logo.png" alt="LogGo Logo" class="w-full h-full object-cover">
+                            <img src="/assets/utama/header_logo.png" alt="LogGo Logo"
+                                class="w-full h-full object-cover">
                         </div>
                     </a>
-                    <p class="text-sm text-slate-600 leading-relaxed pr-0 md:pr-4 max-w-[85%]" data-translate="footer-desc">
-                        PT Inovasi Cakrawala Solusi berkomitmen menyediakan peralatan dan jasa inspeksi mutu untuk menunjang keamanan pangan yang memenuhi standar industri tinggi.
+                    <p class="text-sm text-slate-600 leading-relaxed pr-0 md:pr-4 max-w-[85%]"
+                        data-translate="footer-desc">
+                        PT Inovasi Cakrawala Solusi berkomitmen menyediakan peralatan dan jasa inspeksi mutu untuk
+                        menunjang keamanan pangan yang memenuhi standar industri tinggi.
                     </p>
                 </div>
+
+                <!-- Kolom 2: Quick Links -->
                 <div>
-                    <h3 class="font-bold text-slate-900 mb-5 uppercase text-sm tracking-wider" data-translate="footer-link-title">Quick Links</h3>
+                    <h3 class="font-bold text-slate-900 mb-5 uppercase text-sm tracking-wider"
+                        data-translate="footer-link-title">
+                        Quick Links
+                    </h3>
                     <ul class="space-y-3 text-sm text-slate-600 font-medium">
-                        <li><a href="index.html" class="hover:text-brand-600 transition-colors flex items-center gap-2" data-translate="nav-home"><i class="fa-solid fa-angle-right text-xs"></i> Beranda</a></li>
-                        <li><a href="index.html#about" class="hover:text-brand-600 transition-colors flex items-center gap-2" data-translate="nav-about"><i class="fa-solid fa-angle-right text-xs"></i> Tentang Kami</a></li>
-                        <li><a href="product.html" class="hover:text-brand-600 transition-colors flex items-center gap-2" data-translate="nav-service"><i class="fa-solid fa-angle-right text-xs"></i> Layanan & Produk</a></li>
-                        <li><a href="gallery.html" class="hover:text-brand-600 transition-colors flex items-center gap-2" data-translate="nav-gallery"><i class="fa-solid fa-angle-right text-xs"></i> Galeri</a></li>
+                        <li><a href="#home" class="hover:text-brand-600 transition-colors flex items-center gap-2">
+                                Beranda</a></li>
+                        <li><a href="index.html#about"
+                                class="hover:text-brand-600 transition-colors flex items-center gap-2">
+                                Tentang Kami</a></li>
+                        <li><a href="product.html"
+                                class="hover:text-brand-600 transition-colors flex items-center gap-2"
+                                data-translate="nav-service">
+                                Layanan & Produk</a> </li>
+                        <li><a href="gallery.html"
+                                class="hover:text-brand-600 transition-colors flex items-center gap-2 text-brand-600"
+                                data-translate="nav-gallery"> Galeri</a>
+                        </li>
+                        <li><a href="index.html#contact"
+                                class="hover:text-brand-600 transition-colors flex items-center gap-2"
+                                data-translate="nav-contact"> Contact</a>
+                        </li>
                     </ul>
                 </div>
+
                 <div>
-                    <h3 class="font-bold text-slate-900 mb-5 uppercase text-sm tracking-wider" data-translate="footer-contact-title">Contact Us</h3>
+                    <h3 class="font-bold text-slate-900 mb-5 uppercase text-sm tracking-wider"
+                        data-translate="footer-contact-title">Contact Us</h3>
                     <ul class="space-y-4 text-sm text-slate-600 font-medium">
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-location-dot mt-1 text-brand-600 w-4 text-center"></i><span>Perum. The Taman Dhika A6-16,<br>Buduran, Sidoarjo 61252</span></li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-brand-600 w-4 text-center"></i><span>+62 819 3290 3670</span></li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-brand-600 w-4 text-center"></i><span>info@inovasicakrawalasolusi.com</span></li>
+                        <li class="flex items-start gap-3"><i
+                                class="fa-solid fa-location-dot mt-1 text-brand-600 w-4 text-center"></i><span>Perum.
+                                The Taman Dhika A6-16,<br>Buduran, Sidoarjo 61252</span></li>
+                        <li class="flex items-center gap-3"><i
+                                class="fa-solid fa-phone text-brand-600 w-4 text-center"></i><span>+62 819 3290
+                                3670</span></li>
+                        <li class="flex items-center gap-3"><i
+                                class="fa-solid fa-envelope text-brand-600 w-4 text-center"></i><span>info@inovasicakrawalasolusi.com</span>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="pt-8 border-t border-slate-200 text-center text-sm text-slate-500 font-medium flex flex-col md:flex-row justify-between items-center gap-4">
-                <p data-translate="footer-txt">&copy; 2026 PT Inovasi Cakrawala Solusi. Quality Inspection Solutions.</p>
+            <div
+                class="pt-8 border-t border-slate-200 text-center text-sm text-slate-500 font-medium flex flex-col md:flex-row justify-between items-center gap-4">
+                <p data-translate="footer-txt">&copy; 2026 PT Inovasi Cakrawala Solusi. Quality Inspection Solutions.
+                </p>
             </div>
         </div>
     </footer>
@@ -276,4 +374,5 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/scripts/gallery.js"></script>
 </body>
+
 </html>

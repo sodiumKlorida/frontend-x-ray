@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produk - Technology</title>
+    <title>Solusi Inspeksi Mutu Industri</title>
 
     <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Konfigurasi Tema Tailwind (Sesuai dengan halaman utama) -->
+    <!-- Konfigurasi Tema Tailwind -->
     <script>
         tailwind.config = {
             theme: {
@@ -44,19 +44,10 @@
     <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <style>
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
 
-        .bg-grid-pattern {
-            background-image: linear-gradient(to right, #f1f5f9 1px, transparent 1px),
-                linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-    </style>
+    <link rel="icon" href="/assets/utama/Logo_Transparant_page-0001-removebg-preview 1.svg">
 </head>
 
 <body class="font-sans text-slate-800 bg-surface overflow-x-hidden selection:bg-brand-500 selection:text-white">
@@ -79,7 +70,7 @@
             <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
                 <a href="index.html" class="hover:text-brand-600 transition-colors"
                     data-translate="nav-home">Beranda</a>
-                <a href="product.html" class="hover:text-brand-600 transition-colors"
+                <a href="product.html" class="hover:text-brand-600 transition-colors text-brand-600"
                     data-translate="nav-service">Layanan & Produk</a>
                 <a href="gallery.html" class="hover:text-brand-600 transition-colors"
                     data-translate="nav-gallery">Galeri</a>
@@ -356,18 +347,21 @@
                         Quick Links
                     </h3>
                     <ul class="space-y-3 text-sm text-slate-600 font-medium">
-                        <li><a href="#home" class="hover:text-brand-600 transition-colors flex items-center gap-2"><i
-                                    class="fa-solid fa-angle-right text-xs"></i> Beranda</a></li>
+                        <li><a href="#home" class="hover:text-brand-600 transition-colors flex items-center gap-2"> Beranda</a></li>
                         <li><a href="index.html#about"
                                 class="hover:text-brand-600 transition-colors flex items-center gap-2">
-                                <i class="fa-solid fa-angle-right text-xs"></i> Tentang Kami</a></li>
+                                 Tentang Kami</a></li>
                         <li><a href="product.html"
-                                class="hover:text-brand-600 transition-colors flex items-center gap-2"
+                                class="hover:text-brand-600 transition-colors flex items-center gap-2 text-brand-600"
                                 data-translate="nav-service">
-                                <i class="fa-solid fa-angle-right text-xs"></i> Layanan & Produk</a> </li>
+                                 Layanan & Produk</a> </li>
                         <li><a href="gallery.html"
                                 class="hover:text-brand-600 transition-colors flex items-center gap-2"
-                                data-translate="nav-gallery"><i class="fa-solid fa-angle-right text-xs"></i> Galeri</a>
+                                data-translate="nav-gallery"> Galeri</a>
+                        </li>
+                        <li><a href="index.html#contact"
+                                class="hover:text-brand-600 transition-colors flex items-center gap-2"
+                                data-translate="nav-contact"> Contact</a>
                         </li>
                     </ul>
                 </div>
