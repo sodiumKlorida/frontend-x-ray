@@ -81,6 +81,14 @@ const translations = {
         "lbl-needs": "Kebutuhan",
         "lbl-msg": "Additional Comment / Specific Inquiry",
         "btn-send": "Kirim Pesan Kebutuhan",
+        // Opsi Dropdown & Placeholder Select
+        "opt-mr": "Bapak", // Tambahan baru
+        "opt-ms": "Ibu",   // Tambahan baru
+        "opt-select-industry": "Pilih Industri...",
+        "opt-other-industry": "Lainnya",
+        "opt-select-needs": "Pilih Kebutuhan...",
+        "opt-calibration": "Kalibrasi",
+        "opt-other-needs": "Lainnya",
         "footer-desc": "PT Inovasi Cakrawala Solusi berkomitmen menyediakan peralatan dan jasa inspeksi mutu untuk menunjang keamanan pangan yang memenuhi standar industri tinggi.",
         "footer-link-title": "Tautan Cepat",
         "footer-contact-title": "Hubungi Kami",
@@ -118,6 +126,14 @@ const translations = {
         "lbl-needs": "Needs",
         "lbl-msg": "Additional Comment / Specific Inquiry",
         "btn-send": "Send Quotation Request",
+        // Opsi Dropdown & Placeholder Select
+        "opt-mr": "Mr.",  // Tambahan baru
+        "opt-ms": "Ms.",  // Tambahan baru
+        "opt-select-industry": "Select Industry...",
+        "opt-other-industry": "Other",
+        "opt-select-needs": "Select Needs...",
+        "opt-calibration": "Calibration",
+        "opt-other-needs": "Other",
         "footer-desc": "PT Inovasi Cakrawala Solusi is committed to providing quality inspection equipment and services to support food safety meeting high industrial standards.",
         "footer-link-title": "Quick Links",
         "footer-contact-title": "Contact Us",
@@ -148,7 +164,7 @@ let currentLang = 'id';
 
 function setLanguage(lang) {
     currentLang = lang;
-    
+
     // Ganti Teks Konten
     document.querySelectorAll('[data-translate]').forEach(el => {
         const key = el.getAttribute('data-translate');
@@ -156,7 +172,7 @@ function setLanguage(lang) {
             el.innerHTML = translations[lang][key];
         }
     });
-    
+
     // Ganti Placeholder
     document.querySelectorAll('[data-translate-ph]').forEach(el => {
         const key = el.getAttribute('data-translate-ph');
@@ -170,7 +186,7 @@ function setLanguage(lang) {
     ['desktop', 'mobile'].forEach(type => {
         const btnID = document.getElementById(`btn-id-${type}`);
         const btnEN = document.getElementById(`btn-en-${type}`);
-        
+
         if (btnID && btnEN) {
             if (lang === 'id') {
                 btnID.classList.add(...activeClasses);
@@ -186,10 +202,10 @@ function setLanguage(lang) {
 const toggleLang = () => setLanguage(currentLang === 'id' ? 'en' : 'id');
 
 const btnDesktop = document.getElementById('langToggleDesktop');
-if(btnDesktop) btnDesktop.addEventListener('click', toggleLang);
+if (btnDesktop) btnDesktop.addEventListener('click', toggleLang);
 
 const btnMobile = document.getElementById('langToggleMobile');
-if(btnMobile) btnMobile.addEventListener('click', toggleLang);
+if (btnMobile) btnMobile.addEventListener('click', toggleLang);
 
 // Inisialisasi bahasa default (ID)
 setLanguage('id');
@@ -208,7 +224,7 @@ if (contactForm) {
 
         const btn = document.getElementById('submit-btn');
         const originalText = translations[currentLang]['btn-send']; // Simpan teks asli
-        
+
         btn.innerText = currentLang === 'id' ? 'Mengirim...' : 'Sending...';
 
         const serviceID = 'service_vqu179e';
